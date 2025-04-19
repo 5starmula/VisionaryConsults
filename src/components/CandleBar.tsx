@@ -4,21 +4,23 @@ import React from 'react';
 
 export default function CandleBar() {
   return (
-    <section id="candle-bar" className="py-20 bg-gradient-to-r from-pink-50 to-rose-100">
+    <section id="candle-bar" className="py-20 bg-pink-50">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            {/* Simple text heading instead of image or SVG */}
-            <h2 className="text-3xl md:text-4xl font-bold text-pink-600 mb-4 text-center">
-              Char's Candle Bar
-            </h2>
-            <div className="w-24 h-1 bg-pink-400 mb-8 mx-auto"></div>
-            <h3 className="text-xl font-semibold text-pink-700 mb-4">
-              A Little Light. A Lot of Love.
-            </h3>
-            <p className="text-gray-700 mb-8 text-lg">
-              At Char's Candle Bar, every candle is a handcrafted experience—infused with love, intention, and a touch of luxury. We pour each candle using premium wax blends and thoughtfully curated fragrances designed to calm, uplift, and inspire. Whether you're setting the mood, creating sacred space, or simply indulging in self-care, our candles offer a soft glow and rich aroma that transforms any room into a sanctuary.
-            </p>
+        <div className="text-center mb-10">
+          <h2 className="text-4xl font-bold text-pink-600">
+            Char's Candle Collection
+          </h2>
+          <div className="w-32 h-1 bg-pink-400 mx-auto my-4"></div>
+          <p className="text-xl text-pink-700 font-medium">
+            A Little Light. A Lot of Love.
+          </p>
+        </div>
+        
+        <div className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-md">
+          <p className="text-gray-700 mb-6 text-lg leading-relaxed">
+            At Char's Candle Bar, every candle is a handcrafted experience—infused with love, intention, and a touch of luxury. We pour each candle using premium wax blends and thoughtfully curated fragrances designed to calm, uplift, and inspire. Whether you're setting the mood, creating sacred space, or simply indulging in self-care, our candles offer a soft glow and rich aroma that transforms any room into a sanctuary.
+          </p>
+          <div className="text-center">
             <a 
               href="#" 
               className="inline-block bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300"
@@ -26,20 +28,32 @@ export default function CandleBar() {
               Shop Candles
             </a>
           </div>
-          
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-white rounded-lg shadow-md h-40 flex items-center justify-center">
-              <p className="text-gray-500">Candle Image 1</p>
+        </div>
+        
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
+          <div className="bg-white rounded-lg shadow-md p-4 text-center">
+            <div className="h-32 flex items-center justify-center bg-pink-100 rounded mb-3">
+              <span className="text-pink-500 font-medium">Candle Image 1</span>
             </div>
-            <div className="bg-white rounded-lg shadow-md h-40 flex items-center justify-center">
-              <p className="text-gray-500">Candle Image 2</p>
+            <h3 className="text-pink-600">Lavender Dreams</h3>
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-4 text-center">
+            <div className="h-32 flex items-center justify-center bg-pink-100 rounded mb-3">
+              <span className="text-pink-500 font-medium">Candle Image 2</span>
             </div>
-            <div className="bg-white rounded-lg shadow-md h-40 flex items-center justify-center">
-              <p className="text-gray-500">Candle Image 3</p>
+            <h3 className="text-pink-600">Vanilla Bliss</h3>
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-4 text-center">
+            <div className="h-32 flex items-center justify-center bg-pink-100 rounded mb-3">
+              <span className="text-pink-500 font-medium">Candle Image 3</span>
             </div>
-            <div className="bg-white rounded-lg shadow-md h-40 flex items-center justify-center">
-              <p className="text-gray-500">Candle Image 4</p>
+            <h3 className="text-pink-600">Citrus Garden</h3>
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-4 text-center">
+            <div className="h-32 flex items-center justify-center bg-pink-100 rounded mb-3">
+              <span className="text-pink-500 font-medium">Candle Image 4</span>
             </div>
+            <h3 className="text-pink-600">Ocean Breeze</h3>
           </div>
         </div>
       </div>

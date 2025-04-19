@@ -39,7 +39,7 @@ export default function Header() {
         </button>
         
         {/* Desktop navigation */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex items-center space-x-6">
           <Link href="#what-we-do" className="text-gray-700 hover:text-purple-600 transition duration-300">
             What We Do
           </Link>
@@ -61,6 +61,14 @@ export default function Header() {
           <Link href="#candle-bar" className="text-gray-700 hover:text-purple-600 transition duration-300">
             Candle Bar
           </Link>
+          <a 
+            href="https://buy.stripe.com/test_14k5nk8Ot3Nl7PG4gg" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded-lg shadow-sm transition duration-300"
+          >
+            Make a Payment
+          </a>
         </nav>
       </div>
       
@@ -89,6 +97,15 @@ export default function Header() {
             <Link href="#candle-bar" className="text-gray-700 hover:text-purple-600 transition duration-300" onClick={() => setIsMenuOpen(false)}>
               Candle Bar
             </Link>
+            <a 
+              href="https://buy.stripe.com/test_14k5nk8Ot3Nl7PG4gg" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded-lg shadow-sm transition duration-300 flex justify-center"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Make a Payment
+            </a>
           </div>
         </nav>
       )}

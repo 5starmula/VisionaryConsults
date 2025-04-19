@@ -22,7 +22,7 @@ export default function Footer() {
             <p className="mb-4 text-purple-200">
               Empowering professionals and organizations with innovative HR strategies and creative business solutions.
             </p>
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 mb-6">
               <span className="text-purple-200 font-medium">Follow us:</span>
               <a href="#" className="text-white hover:text-purple-300 transition duration-300">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -35,6 +35,14 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
+            <a 
+              href="https://buy.stripe.com/test_14k5nk8Ot3Nl7PG4gg" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-block bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300"
+            >
+              Make a Payment
+            </a>
           </div>
           
           <div>

@@ -1,18 +1,26 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable static exporting which works better with Vercel for this use case
+  // Output static files for Vercel deployment
   output: 'export',
   
-  // Optimize images at build time
+  // Images will be handled by webpack during import
   images: {
     unoptimized: true,
     remotePatterns: [],
+    disableStaticImages: false,
   },
   
-  // Ensure assets are found correctly
-  assetPrefix: '/',
+  // Add TypeScript support for image imports
+  webpack(config: any) {
+    config.module.rules.push({
+      test: /\.(png|jpe?g|gif|svg)$/i,
+      type: 'asset/resource',
+    });
+    
+    return config;
+  },
   
-  // Add trailing slash for consistency
+  // Ensure trailing slash for consistent routing
   trailingSlash: true,
 };
 

@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-// Removing the Next.js Image import
-// import Image from 'next/image';
+// Import the image directly
+import candleImage from '../../public/images/Candle.png';
 
 export default function CandleBar() {
   return (
@@ -10,9 +10,9 @@ export default function CandleBar() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            {/* Using regular img tag with a more reliable path structure */}
+            {/* Use the imported image with an img tag */}
             <img
-              src="./images/Candle.png"
+              src={candleImage.src}
               alt="Char's Candle Bar"
               className="mb-4 max-w-full h-auto mx-auto"
               style={{ maxWidth: '280px', display: 'block' }}

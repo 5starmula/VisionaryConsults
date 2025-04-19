@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <!-- Eye shape -->
+  <path d="M93.4 240.5c48.7-51.6 122.2-84.5 203.1-84.5 80.9 0 154.4 32.9 203.1 84.5-48.7 51.6-122.2 84.5-203.1 84.5-80.9 0-154.4-32.9-203.1-84.5z" fill="none" stroke="#8BC34A" stroke-width="30"/>
+  
+  <!-- Lightbulb outer circle -->
+  <circle cx="296.5" cy="240.5" r="70" fill="#8BC34A"/>
+  
+  <!-- Lightbulb inner -->
+  <circle cx="296.5" cy="240.5" r="45" fill="#F9C74F"/>
+  
+  <!-- Lightbulb filament -->
+  <path d="M296.5 215 L296.5 250 L275 275" fill="none" stroke="#8BC34A" stroke-width="6"/>
+  
+  <!-- Lightbulb base -->
+  <rect x="280" y="300" width="33" height="10" fill="#F9C74F"/>
+  
+  <!-- VISIONARY text -->
+  <text x="25" y="400" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="#F9C74F">VISIONARY</text>
+  
+  <!-- CONSULTS, LLC text -->
+  <text x="90" y="460" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#8BC34A">CONSULTS, LLC</text>
+</svg> 

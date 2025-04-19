@@ -5,18 +5,18 @@ import React from 'react';
 export default function WhatWeDo() {
   const services = [
     {
-      title: "HR Strategy & Consulting",
-      description: "Customized HR solutions to help your organization thrive. From policy development to organizational design, we provide the strategic guidance you need.",
+      title: "Career & HR Consulting",
+      description: "Resume development, workplace strategies, and hiring guidance.",
       icon: "📊"
     },
     {
-      title: "Professional Development",
-      description: "Empowering career growth through personalized coaching, skill-building resources, and leadership development programs.",
-      icon: "🚀"
+      title: "Children's Books",
+      description: "Explore our inspiring collection of books and printable activities that nurture resilience and creativity.",
+      icon: "📚"
     },
     {
-      title: "Creative Business Solutions",
-      description: "Innovative templates, systems, and tools designed to streamline your business operations and boost productivity.",
+      title: "Business & Admin Support",
+      description: "Back-end operations, nonprofit support, templates, and forms for solopreneurs and small teams.",
       icon: "💡"
     }
   ];
@@ -28,7 +28,7 @@ export default function WhatWeDo() {
           <h2 className="text-3xl md:text-4xl font-bold text-purple-900 mb-4">What We Do</h2>
           <div className="w-24 h-1 bg-purple-600 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            At Visionary Consults, we provide comprehensive solutions to help professionals and organizations reach their full potential.
+            At Visionary Consults, we believe in blending passion with purpose. Our services and offerings span across:
           </p>
         </div>
         

@@ -2,9 +2,11 @@ import React from 'react';
 import Hero from '../components/Hero';
 import WhatWeDo from '../components/WhatWeDo';
 import Mission from '../components/Mission';
+import WhyWorkWithUs from '../components/WhyWorkWithUs';
+import About from '../components/About';
+import BookConsultation from '../components/BookConsultation';
 import Books from '../components/Books';
 import Templates from '../components/Templates';
-import About from '../components/About';
 import CandleBar from '../components/CandleBar';
 import Footer from '../components/Footer';
 
@@ -14,11 +16,13 @@ export default function Home() {
       <Hero />
       <WhatWeDo />
       <Mission />
+      <WhyWorkWithUs />
+      <About />
+      <BookConsultation />
       <Books />
       <Templates />
-      <About />
       <CandleBar />
       <Footer />
     </main>
   );
-} 
+}

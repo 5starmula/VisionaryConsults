@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
+import Image from 'next/image';
 import Header from './Header';
 
 export default function Hero() {
@@ -12,13 +13,10 @@ export default function Hero() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <h1 className="text-4xl md:text-6xl font-bold text-purple-900 mb-6">
-                Visionary Consults, LLC
+                Welcome to Visionary Consults
               </h1>
-              <h2 className="text-xl md:text-2xl text-gray-700 mb-8">
-                Strategic HR Solutions for Modern Professionals
-              </h2>
               <p className="text-gray-600 mb-8 text-lg">
-                Empowering professionals and organizations with innovative HR strategies, personal development resources, and creative business solutions.
+                Your trusted partner in professional growth, creative development, and purposeful living. Whether you are navigating a career crossroads, building a business, or seeking tools to empower young minds, you're in the right place
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
@@ -36,8 +34,15 @@ export default function Hero() {
               </div>
             </div>
             <div className="order-1 md:order-2 flex justify-center">
-              <div className="bg-gray-200 rounded-lg h-80 w-80 md:h-96 md:w-96 flex items-center justify-center">
-                <p className="text-gray-500 text-center">Hero Image Placeholder</p>
+              <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-lg">
+                <Image 
+                  src="/images/heropic.jpg" 
+                  alt="Visionary Consults Hero" 
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  priority
+                  className="rounded-lg"
+                />
               </div>
             </div>
           </div>

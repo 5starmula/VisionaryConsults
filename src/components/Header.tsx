@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,8 +11,14 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full bg-white shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
-          <Link href="/" className="text-2xl font-bold text-purple-800">
-            Visionary Consults, LLC
+          <Link href="/" className="flex items-center">
+            <Image 
+              src="/images/logo.png" 
+              alt="Visionary Consults Logo" 
+              width={100} 
+              height={100} 
+              priority
+            />
           </Link>
         </div>
         
@@ -39,14 +46,17 @@ export default function Header() {
           <Link href="#mission" className="text-gray-700 hover:text-purple-600 transition duration-300">
             Mission
           </Link>
+          <Link href="#about" className="text-gray-700 hover:text-purple-600 transition duration-300">
+            About
+          </Link>
+          <Link href="#book-consultation" className="text-gray-700 hover:text-purple-600 transition duration-300">
+            Consultation
+          </Link>
           <Link href="#books" className="text-gray-700 hover:text-purple-600 transition duration-300">
             Books
           </Link>
           <Link href="#templates" className="text-gray-700 hover:text-purple-600 transition duration-300">
             Templates
-          </Link>
-          <Link href="#about" className="text-gray-700 hover:text-purple-600 transition duration-300">
-            About
           </Link>
           <Link href="#candle-bar" className="text-gray-700 hover:text-purple-600 transition duration-300">
             Candle Bar
@@ -64,14 +74,17 @@ export default function Header() {
             <Link href="#mission" className="text-gray-700 hover:text-purple-600 transition duration-300" onClick={() => setIsMenuOpen(false)}>
               Mission
             </Link>
+            <Link href="#about" className="text-gray-700 hover:text-purple-600 transition duration-300" onClick={() => setIsMenuOpen(false)}>
+              About
+            </Link>
+            <Link href="#book-consultation" className="text-gray-700 hover:text-purple-600 transition duration-300" onClick={() => setIsMenuOpen(false)}>
+              Consultation
+            </Link>
             <Link href="#books" className="text-gray-700 hover:text-purple-600 transition duration-300" onClick={() => setIsMenuOpen(false)}>
               Books
             </Link>
             <Link href="#templates" className="text-gray-700 hover:text-purple-600 transition duration-300" onClick={() => setIsMenuOpen(false)}>
               Templates
-            </Link>
-            <Link href="#about" className="text-gray-700 hover:text-purple-600 transition duration-300" onClick={() => setIsMenuOpen(false)}>
-              About
             </Link>
             <Link href="#candle-bar" className="text-gray-700 hover:text-purple-600 transition duration-300" onClick={() => setIsMenuOpen(false)}>
               Candle Bar

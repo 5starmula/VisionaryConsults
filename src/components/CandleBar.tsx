@@ -8,14 +8,10 @@ export default function CandleBar() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            {/* Simple SVG logo that will display reliably */}
-            <div className="mb-4 flex justify-center">
-              <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
-                <text x="0" y="40" fontFamily="Arial" fontSize="24" fontWeight="bold" fill="#E91E63">
-                  Char's Candle Bar
-                </text>
-              </svg>
-            </div>
+            {/* Simple text heading instead of image or SVG */}
+            <h2 className="text-3xl md:text-4xl font-bold text-pink-600 mb-4 text-center">
+              Char's Candle Bar
+            </h2>
             <div className="w-24 h-1 bg-pink-400 mb-8 mx-auto"></div>
             <h3 className="text-xl font-semibold text-pink-700 mb-4">
               A Little Light. A Lot of Love.

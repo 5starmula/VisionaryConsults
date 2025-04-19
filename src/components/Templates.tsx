@@ -56,6 +56,18 @@ export default function Templates() {
             </div>
           ))}
         </div>
+        
+        {/* View All Templates button */}
+        <div className="mt-12 text-center">
+          <a 
+            href="https://etsy.com/shop/visionaryconsults" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-300"
+          >
+            View All Templates
+          </a>
+        </div>
       </div>
     </section>
   );

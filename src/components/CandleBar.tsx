@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export default function CandleBar() {
   return (
@@ -8,7 +9,13 @@ export default function CandleBar() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-pink-600 mb-4">Char's Candle Bar</h2>
+            <Image
+              src="/images/Candle.png"
+              alt="Char's Candle Bar"
+              width={400}
+              height={200}
+              className="mb-4"
+            />
             <div className="w-24 h-1 bg-pink-400 mb-8"></div>
             <h3 className="text-xl font-semibold text-pink-700 mb-4">
               A Little Light. A Lot of Love.

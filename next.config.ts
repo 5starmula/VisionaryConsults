@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    unoptimized: true,
-  },
+  // Let Vercel handle the deployment method
+  // Removed output config to use Vercel's default
 };
 
 export default nextConfig;

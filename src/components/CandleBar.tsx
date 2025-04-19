@@ -10,9 +10,9 @@ export default function CandleBar() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            {/* Using regular img tag instead of Next.js Image */}
+            {/* Using regular img tag with a more reliable path structure */}
             <img
-              src="/images/Candle.png"
+              src="./images/Candle.png"
               alt="Char's Candle Bar"
               className="mb-4 max-w-full h-auto mx-auto"
               style={{ maxWidth: '280px', display: 'block' }}

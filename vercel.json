@@ -1,4 +1,7 @@
 {
   "framework": "nextjs",
-  "cleanUrls": true
+  "cleanUrls": false,
+  "trailingSlash": true,
+  "buildCommand": "npm run build",
+  "outputDirectory": "out"
 }

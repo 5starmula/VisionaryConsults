@@ -1,13 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Let Vercel handle the deployment method
-  // Removed output config to use Vercel's default
+  // Enable static exporting which works better with Vercel for this use case
+  output: 'export',
   
-  // Add image configuration
+  // Optimize images at build time
   images: {
-    domains: [],
     unoptimized: true,
+    remotePatterns: [],
   },
+  
+  // Ensure assets are found correctly
+  assetPrefix: '/',
+  
+  // Add trailing slash for consistency
+  trailingSlash: true,
 };
 
 export default nextConfig;

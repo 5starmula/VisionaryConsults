@@ -20,9 +20,9 @@ export default function Templates() {
       description: "Protect your business with HR documents aligned with federal labor standards. Includes at-will acknowledgments, confidentiality agreements, code of conduct templates, and basic policy."
     },
     {
-      title: "Leadership Assessment Framework",
+      title: "Onboarding & Offboarding Kit",
       image: "template-placeholder.jpg",
-      description: "Evaluation templates to assess and develop leadership skills within your team or organization."
+      description: "Make a lasting first and final impression. Includes checklists, welcome letters, orientation forms, exit interviews, and termination templates for smooth transitions."
     }
   ];
 

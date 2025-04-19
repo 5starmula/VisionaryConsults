@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
+// Removing the Next.js Image import
+// import Image from 'next/image';
 
 export default function CandleBar() {
   return (
@@ -9,12 +10,12 @@ export default function CandleBar() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <Image
+            {/* Using regular img tag instead of Next.js Image */}
+            <img
               src="/images/Candle.png"
               alt="Char's Candle Bar"
-              width={400}
-              height={200}
-              className="mb-4"
+              className="mb-4 max-w-full h-auto"
+              style={{ maxWidth: '400px' }}
             />
             <div className="w-24 h-1 bg-pink-400 mb-8"></div>
             <h3 className="text-xl font-semibold text-pink-700 mb-4">

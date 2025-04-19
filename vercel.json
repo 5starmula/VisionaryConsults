@@ -3,5 +3,9 @@
     "submodules": true
   },
   "buildCommand": "cd visionary-consults && npm install && npm run build",
-  "outputDirectory": "visionary-consults/out"
+  "outputDirectory": "visionary-consults/out",
+  "framework": "nextjs",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 } 

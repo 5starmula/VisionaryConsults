@@ -15,9 +15,9 @@ export default function Templates() {
       description: "Everything you need to manage employees with confidence. Includes performance evaluations, disciplinary forms, attendance trackers, and more to support day-to-day HR operations."
     },
     {
-      title: "Business Operations Toolkit",
+      title: "Compliance & Policies Starter Pack",
       image: "template-placeholder.jpg",
-      description: "Essential templates and tools to streamline your business operations and increase productivity."
+      description: "Protect your business with HR documents aligned with federal labor standards. Includes at-will acknowledgments, confidentiality agreements, code of conduct templates, and basic policy."
     },
     {
       title: "Leadership Assessment Framework",

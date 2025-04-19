@@ -14,8 +14,8 @@ export default function CandleBar() {
             <img
               src="/images/Candle.png"
               alt="Char's Candle Bar"
-              className="mb-4 max-w-full h-auto"
-              style={{ maxWidth: '400px' }}
+              className="mb-4 max-w-full h-auto mx-auto"
+              style={{ maxWidth: '280px', display: 'block' }}
             />
             <div className="w-24 h-1 bg-pink-400 mb-8"></div>
             <h3 className="text-xl font-semibold text-pink-700 mb-4">

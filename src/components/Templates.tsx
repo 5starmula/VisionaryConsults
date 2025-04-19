@@ -5,9 +5,9 @@ import React from 'react';
 export default function Templates() {
   const templates = [
     {
-      title: "HR Policy Bundle",
+      title: "Hiring & Recruitment Toolkit",
       image: "template-placeholder.jpg",
-      description: "Comprehensive HR policy templates to help you establish clear guidelines and procedures for your organization."
+      description: "A complete set of forms and templates to streamline your hiring process from job descriptions to offer letters. Perfect for building a consistent and compliant recruitment workflow."
     },
     {
       title: "Career Development Planner",

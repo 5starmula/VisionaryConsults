@@ -1,0 +1,7 @@
+{
+  "git": {
+    "submodules": true
+  },
+  "buildCommand": "cd visionary-consults && npm install && npm run build",
+  "outputDirectory": "visionary-consults/out"
+} 

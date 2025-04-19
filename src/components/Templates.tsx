@@ -10,9 +10,9 @@ export default function Templates() {
       description: "A complete set of forms and templates to streamline your hiring process from job descriptions to offer letters. Perfect for building a consistent and compliant recruitment workflow."
     },
     {
-      title: "Career Development Planner",
+      title: "Employment Management Essentials",
       image: "template-placeholder.jpg",
-      description: "Strategic planning templates to map out your professional growth journey and track your progress."
+      description: "Everything you need to manage employees with confidence. Includes performance evaluations, disciplinary forms, attendance trackers, and more to support day-to-day HR operations."
     },
     {
       title: "Business Operations Toolkit",

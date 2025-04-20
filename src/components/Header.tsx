@@ -10,18 +10,6 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-[#2E2E2E] shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="flex items-center">
-          <Link href="/" className="flex items-center">
-            <Image 
-              src="/images/logo.png" 
-              alt="Visionary Consults Logo" 
-              width={100} 
-              height={100} 
-              priority
-            />
-          </Link>
-        </div>
-        
         {/* Mobile menu button */}
         <button 
           className="md:hidden text-white"
@@ -38,7 +26,7 @@ export default function Header() {
           )}
         </button>
         
-        {/* Desktop navigation */}
+        {/* Left navigation items */}
         <nav className="hidden md:flex items-center space-x-6">
           <Link href="#what-we-do" className="text-[#F8E1DA] hover:text-white transition duration-300">
             What We Do
@@ -52,6 +40,25 @@ export default function Header() {
           <Link href="#book-consultation" className="text-[#F8E1DA] hover:text-white transition duration-300">
             Consultation
           </Link>
+        </nav>
+        
+        {/* Center logo/brand */}
+        <div className="flex items-center justify-center">
+          <Link href="/" className="flex items-center">
+            <Image 
+              src="/images/logo.png" 
+              alt="Visionary Consults Logo" 
+              width={60} 
+              height={60} 
+              priority
+              className="mr-3"
+            />
+            <h1 className="text-white text-xl font-bold uppercase">Visionary Consults</h1>
+          </Link>
+        </div>
+        
+        {/* Right navigation items */}
+        <nav className="hidden md:flex items-center space-x-6">
           <Link href="#books" className="text-[#F8E1DA] hover:text-white transition duration-300">
             Books
           </Link>

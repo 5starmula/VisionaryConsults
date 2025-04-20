@@ -8,7 +8,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#FAF9F6] shadow-md">
+    <header className="sticky top-0 z-50 w-full bg-[#708238] shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
@@ -24,7 +24,7 @@ export default function Header() {
         
         {/* Mobile menu button */}
         <button 
-          className="md:hidden text-[#2E2E2E]"
+          className="md:hidden text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
@@ -40,25 +40,25 @@ export default function Header() {
         
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link href="#what-we-do" className="text-[#2E2E2E] hover:text-[#708238] transition duration-300">
+          <Link href="#what-we-do" className="text-white hover:text-[#F8E1DA] transition duration-300">
             What We Do
           </Link>
-          <Link href="#mission" className="text-[#2E2E2E] hover:text-[#708238] transition duration-300">
+          <Link href="#mission" className="text-white hover:text-[#F8E1DA] transition duration-300">
             Mission
           </Link>
-          <Link href="#about" className="text-[#2E2E2E] hover:text-[#708238] transition duration-300">
+          <Link href="#about" className="text-white hover:text-[#F8E1DA] transition duration-300">
             About
           </Link>
-          <Link href="#book-consultation" className="text-[#2E2E2E] hover:text-[#708238] transition duration-300">
+          <Link href="#book-consultation" className="text-white hover:text-[#F8E1DA] transition duration-300">
             Consultation
           </Link>
-          <Link href="#books" className="text-[#2E2E2E] hover:text-[#708238] transition duration-300">
+          <Link href="#books" className="text-white hover:text-[#F8E1DA] transition duration-300">
             Books
           </Link>
-          <Link href="#templates" className="text-[#2E2E2E] hover:text-[#708238] transition duration-300">
+          <Link href="#templates" className="text-white hover:text-[#F8E1DA] transition duration-300">
             Templates
           </Link>
-          <Link href="#candle-bar" className="text-[#2E2E2E] hover:text-[#708238] transition duration-300">
+          <Link href="#candle-bar" className="text-white hover:text-[#F8E1DA] transition duration-300">
             Candle Bar
           </Link>
           <a 
@@ -74,27 +74,27 @@ export default function Header() {
       
       {/* Mobile navigation */}
       {isMenuOpen && (
-        <nav className="md:hidden bg-[#FAF9F6] py-4 px-6 shadow-inner">
+        <nav className="md:hidden bg-[#708238] py-4 px-6 shadow-inner">
           <div className="flex flex-col space-y-4">
-            <Link href="#what-we-do" className="text-[#2E2E2E] hover:text-[#708238] transition duration-300" onClick={() => setIsMenuOpen(false)}>
+            <Link href="#what-we-do" className="text-white hover:text-[#F8E1DA] transition duration-300" onClick={() => setIsMenuOpen(false)}>
               What We Do
             </Link>
-            <Link href="#mission" className="text-[#2E2E2E] hover:text-[#708238] transition duration-300" onClick={() => setIsMenuOpen(false)}>
+            <Link href="#mission" className="text-white hover:text-[#F8E1DA] transition duration-300" onClick={() => setIsMenuOpen(false)}>
               Mission
             </Link>
-            <Link href="#about" className="text-[#2E2E2E] hover:text-[#708238] transition duration-300" onClick={() => setIsMenuOpen(false)}>
+            <Link href="#about" className="text-white hover:text-[#F8E1DA] transition duration-300" onClick={() => setIsMenuOpen(false)}>
               About
             </Link>
-            <Link href="#book-consultation" className="text-[#2E2E2E] hover:text-[#708238] transition duration-300" onClick={() => setIsMenuOpen(false)}>
+            <Link href="#book-consultation" className="text-white hover:text-[#F8E1DA] transition duration-300" onClick={() => setIsMenuOpen(false)}>
               Consultation
             </Link>
-            <Link href="#books" className="text-[#2E2E2E] hover:text-[#708238] transition duration-300" onClick={() => setIsMenuOpen(false)}>
+            <Link href="#books" className="text-white hover:text-[#F8E1DA] transition duration-300" onClick={() => setIsMenuOpen(false)}>
               Books
             </Link>
-            <Link href="#templates" className="text-[#2E2E2E] hover:text-[#708238] transition duration-300" onClick={() => setIsMenuOpen(false)}>
+            <Link href="#templates" className="text-white hover:text-[#F8E1DA] transition duration-300" onClick={() => setIsMenuOpen(false)}>
               Templates
             </Link>
-            <Link href="#candle-bar" className="text-[#2E2E2E] hover:text-[#708238] transition duration-300" onClick={() => setIsMenuOpen(false)}>
+            <Link href="#candle-bar" className="text-white hover:text-[#F8E1DA] transition duration-300" onClick={() => setIsMenuOpen(false)}>
               Candle Bar
             </Link>
             <a 

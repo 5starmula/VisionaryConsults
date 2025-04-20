@@ -41,6 +41,8 @@ export default function Hero() {
                   fill
                   style={{ objectFit: 'contain' }}
                   priority
+                  quality={85}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="rounded-lg"
                 />
               </div>

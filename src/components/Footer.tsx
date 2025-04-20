@@ -54,7 +54,6 @@ export default function Footer() {
               <li><a href="#book-consultation" className="text-[#F8E1DA] hover:text-white transition duration-300">Consultation</a></li>
               <li><a href="#books" className="text-[#F8E1DA] hover:text-white transition duration-300">Books</a></li>
               <li><a href="#templates" className="text-[#F8E1DA] hover:text-white transition duration-300">Templates</a></li>
-              <li><a href="#candle-bar" className="text-[#F8E1DA] hover:text-white transition duration-300">Candle Bar</a></li>
             </ul>
           </div>
           

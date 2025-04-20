@@ -38,14 +38,14 @@ export default function BookConsultation() {
   };
 
   return (
-    <section id="book-consultation" className="py-16 bg-[#F8E1DA]">
+    <section id="book-consultation" className="py-16 bg-[#708238]">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2E2E2E] mb-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">
             Book a Free Consultation
           </h2>
           
-          <p className="text-lg text-center text-[#2E2E2E] mb-8">
+          <p className="text-lg text-center text-[#F8E1DA] mb-8">
             Complete the form and we will get back to you within 24-hours to book a consultation.
           </p>
           
@@ -155,32 +155,32 @@ export default function BookConsultation() {
             
             <div className="flex flex-col justify-center">
               <div className="mb-8">
-                <p className="text-[#2E2E2E] mb-6 text-lg">
+                <p className="text-white mb-6 text-lg">
                   Our support is customized, on-demand and scales with your needs. You only pay when you use us.
                 </p>
                 
-                <p className="text-[#2E2E2E] text-lg">
+                <p className="text-white text-lg">
                   We take the stress out of HR. We are more than just strategic advisors – we do the work, so you can focus on building your business.
                 </p>
               </div>
               
-              <div className="bg-[#FAF9F6] p-6 rounded-lg border-l-4 border-[#708238]">
+              <div className="bg-[#FAF9F6] p-6 rounded-lg border-l-4 border-[#A1887F]">
                 <h3 className="text-xl font-semibold text-[#2E2E2E] mb-2">Why Choose Us?</h3>
                 <ul className="space-y-2 text-[#2E2E2E]">
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#708238] mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-[#A1887F] mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                     Personalized HR strategies tailored to your business
                   </li>
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#708238] mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-[#A1887F] mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                     Flexible, on-demand support
                   </li>
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#708238] mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-[#A1887F] mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                     Implementation, not just consultation

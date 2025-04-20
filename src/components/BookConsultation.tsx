@@ -11,6 +11,9 @@ export default function BookConsultation() {
     phone: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -20,21 +23,43 @@ export default function BookConsultation() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would handle the form submission, e.g., send data to an API
-    console.log('Form submitted:', formData);
-    // Reset form after submission
-    setFormData({
-      firstName: '',
-      lastName: '',
-      companyName: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
-    // Show success message
-    alert('Thank you for your submission! We will contact you within 24 hours.');
+    setIsSubmitting(true);
+    setSubmitError('');
+    
+    try {
+      // Send data to our API endpoint
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+      
+      // After successful submission
+      setSubmitSuccess(true);
+      setFormData({
+        firstName: '',
+        lastName: '',
+        companyName: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitError('There was an error submitting your form. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -52,104 +77,129 @@ export default function BookConsultation() {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <div className="bg-white p-8 rounded-lg shadow-md">
-                <form onSubmit={handleSubmit}>
-                  <div className="grid md:grid-cols-2 gap-4 mb-4">
-                    <div>
-                      <label htmlFor="firstName" className="block text-[#2E2E2E] font-medium mb-2">
-                        First Name*
+                {submitSuccess ? (
+                  <div className="text-center py-8">
+                    <svg className="w-16 h-16 text-[#708238] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <h3 className="text-xl font-semibold mb-2">Thank You!</h3>
+                    <p className="text-[#2E2E2E] mb-4">Your consultation request has been submitted. We will contact you within 24 hours.</p>
+                    <button 
+                      onClick={() => setSubmitSuccess(false)}
+                      className="bg-[#A1887F] text-white font-medium py-2 px-4 rounded-md hover:bg-[#8D776F] transition duration-300"
+                    >
+                      Submit Another Request
+                    </button>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit}>
+                    <div className="grid md:grid-cols-2 gap-4 mb-4">
+                      <div>
+                        <label htmlFor="firstName" className="block text-[#2E2E2E] font-medium mb-2">
+                          First Name*
+                        </label>
+                        <input
+                          type="text"
+                          id="firstName"
+                          name="firstName"
+                          value={formData.firstName}
+                          onChange={handleChange}
+                          required
+                          className="w-full px-4 py-2 border border-[#A1887F] rounded-md focus:outline-none focus:ring-2 focus:ring-[#708238] text-black"
+                        />
+                      </div>
+                      
+                      <div>
+                        <label htmlFor="lastName" className="block text-[#2E2E2E] font-medium mb-2">
+                          Last Name*
+                        </label>
+                        <input
+                          type="text"
+                          id="lastName"
+                          name="lastName"
+                          value={formData.lastName}
+                          onChange={handleChange}
+                          required
+                          className="w-full px-4 py-2 border border-[#A1887F] rounded-md focus:outline-none focus:ring-2 focus:ring-[#708238] text-black"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <label htmlFor="companyName" className="block text-[#2E2E2E] font-medium mb-2">
+                        Company Name
                       </label>
                       <input
                         type="text"
-                        id="firstName"
-                        name="firstName"
-                        value={formData.firstName}
+                        id="companyName"
+                        name="companyName"
+                        value={formData.companyName}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2 border border-[#A1887F] rounded-md focus:outline-none focus:ring-2 focus:ring-[#708238] text-black"
+                      />
+                    </div>
+                    
+                    <div className="mb-4">
+                      <label htmlFor="email" className="block text-[#2E2E2E] font-medium mb-2">
+                        Email*
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-2 border border-[#A1887F] rounded-md focus:outline-none focus:ring-2 focus:ring-[#708238] text-black"
                       />
                     </div>
                     
-                    <div>
-                      <label htmlFor="lastName" className="block text-[#2E2E2E] font-medium mb-2">
-                        Last Name*
+                    <div className="mb-4">
+                      <label htmlFor="phone" className="block text-[#2E2E2E] font-medium mb-2">
+                        Phone Number
                       </label>
                       <input
-                        type="text"
-                        id="lastName"
-                        name="lastName"
-                        value={formData.lastName}
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
                         onChange={handleChange}
-                        required
                         className="w-full px-4 py-2 border border-[#A1887F] rounded-md focus:outline-none focus:ring-2 focus:ring-[#708238] text-black"
                       />
                     </div>
-                  </div>
-                  
-                  <div className="mb-4">
-                    <label htmlFor="companyName" className="block text-[#2E2E2E] font-medium mb-2">
-                      Company Name
-                    </label>
-                    <input
-                      type="text"
-                      id="companyName"
-                      name="companyName"
-                      value={formData.companyName}
-                      onChange={handleChange}
-                      className="w-full px-4 py-2 border border-[#A1887F] rounded-md focus:outline-none focus:ring-2 focus:ring-[#708238] text-black"
-                    />
-                  </div>
-                  
-                  <div className="mb-4">
-                    <label htmlFor="email" className="block text-[#2E2E2E] font-medium mb-2">
-                      Email*
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-2 border border-[#A1887F] rounded-md focus:outline-none focus:ring-2 focus:ring-[#708238] text-black"
-                    />
-                  </div>
-                  
-                  <div className="mb-4">
-                    <label htmlFor="phone" className="block text-[#2E2E2E] font-medium mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-2 border border-[#A1887F] rounded-md focus:outline-none focus:ring-2 focus:ring-[#708238] text-black"
-                    />
-                  </div>
-                  
-                  <div className="mb-6">
-                    <label htmlFor="message" className="block text-[#2E2E2E] font-medium mb-2">
-                      Tell us a bit about your business and your HR challenges*
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={5}
-                      className="w-full px-4 py-2 border border-[#A1887F] rounded-md focus:outline-none focus:ring-2 focus:ring-[#708238] text-black"
-                    ></textarea>
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    className="w-full bg-[#A1887F] text-white font-medium py-3 rounded-md hover:bg-[#8D776F] transition duration-300"
-                  >
-                    Submit
-                  </button>
-                </form>
+                    
+                    <div className="mb-6">
+                      <label htmlFor="message" className="block text-[#2E2E2E] font-medium mb-2">
+                        Tell us a bit about your business and your HR challenges*
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        rows={5}
+                        className="w-full px-4 py-2 border border-[#A1887F] rounded-md focus:outline-none focus:ring-2 focus:ring-[#708238] text-black"
+                      ></textarea>
+                    </div>
+                    
+                    {submitError && (
+                      <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-md">
+                        {submitError}
+                      </div>
+                    )}
+                    
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className={`w-full bg-[#A1887F] text-white font-medium py-3 rounded-md transition duration-300 ${
+                        isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-[#8D776F]'
+                      }`}
+                    >
+                      {isSubmitting ? 'Submitting...' : 'Submit'}
+                    </button>
+                  </form>
+                )}
               </div>
             </div>
             

@@ -32,12 +32,12 @@ export default function Books() {
   ];
 
   return (
-    <section id="books" className="py-20 bg-gray-50">
+    <section id="books" className="py-20 bg-[#FAF9F6]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-purple-900 mb-4">Books</h2>
-          <div className="w-24 h-1 bg-purple-600 mx-auto mb-6"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#2E2E2E] mb-4">Books</h2>
+          <div className="w-24 h-1 bg-[#A1887F] mx-auto mb-6"></div>
+          <p className="text-[#2E2E2E] max-w-2xl mx-auto">
             Explore our collection of insightful books designed to help you navigate your professional journey with confidence.
           </p>
         </div>
@@ -45,9 +45,9 @@ export default function Books() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {books.map((book, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl group flex flex-col h-full">
-              <div className="h-96 bg-gray-100 flex items-center justify-center relative">
+              <div className="h-96 bg-[#F8E1DA] flex items-center justify-center relative">
                 {book.image === "book-placeholder.jpg" ? (
-                  <p className="text-gray-500">Book Cover Placeholder</p>
+                  <p className="text-[#2E2E2E]">Book Cover Placeholder</p>
                 ) : (
                   <Image 
                     src={`/images/${book.image}`} 
@@ -59,8 +59,8 @@ export default function Books() {
                 )}
               </div>
               <div className="p-4 flex flex-col flex-grow">
-                <h3 className="text-lg font-bold text-purple-800 mb-2 group-hover:text-purple-600 transition duration-300">{book.title}</h3>
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                <h3 className="text-lg font-bold text-[#708238] mb-2 group-hover:text-[#A1887F] transition duration-300">{book.title}</h3>
+                <p className="text-[#2E2E2E] text-sm mb-4 line-clamp-3">
                   {book.blurb}
                 </p>
                 <div className="mt-auto">
@@ -68,7 +68,7 @@ export default function Books() {
                     href={book.buyLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 text-sm"
+                    className="inline-block bg-[#A1887F] hover:bg-[#8D776F] text-white font-semibold py-2 px-4 rounded-lg transition duration-300 text-sm"
                   >
                     Buy on Amazon
                   </a>
@@ -83,7 +83,7 @@ export default function Books() {
             href="https://www.amazon.com/stores/Char-Vernon/author/B0DWJHMLH5?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true&ccs_id=6deca303-28b8-4091-b688-6e5c1177fce9"
             target="_blank"
             rel="noopener noreferrer" 
-            className="inline-block bg-white text-purple-700 border-2 border-purple-600 hover:bg-purple-50 font-semibold py-3 px-10 rounded-lg shadow-md transition duration-300"
+            className="inline-block bg-white text-[#708238] border-2 border-[#A1887F] hover:bg-[#F8E1DA] font-semibold py-3 px-10 rounded-lg shadow-md transition duration-300"
           >
             See All Books
           </a>

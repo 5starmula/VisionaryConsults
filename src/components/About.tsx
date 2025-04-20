@@ -18,41 +18,41 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-r from-purple-50 to-indigo-50">
+    <section id="about" className="py-20 bg-gradient-to-r from-[#FAF9F6] to-[#F8E1DA]">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
-            <h2 className="text-3xl md:text-4xl font-bold text-purple-900 mb-4">About Char Vernon</h2>
-            <h3 className="text-xl text-purple-700 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#2E2E2E] mb-4">About Char Vernon</h2>
+            <h3 className="text-xl text-[#708238] mb-6">
               Founder | HR Strategist | Author | Creative Director
             </h3>
-            <p className="text-gray-700 mb-8">
+            <p className="text-[#2E2E2E] mb-8">
               With over 10 years of experience in Human Resources and organizational development, Char brings a unique blend of strategic insight, creativity, and compassion to every client interaction. She leads Visionary Consults with a focus on empowering professionals and families through workplace consulting, business operations support, and creative storytelling.
             </p>
             
             <div className="mb-6">
-              <h4 className="text-lg font-semibold text-purple-800 mb-3">Core Strengths:</h4>
+              <h4 className="text-lg font-semibold text-[#708238] mb-3">Core Strengths:</h4>
               <ul className="space-y-2">
                 {coreStrengths.map((strength, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-purple-600 mr-2">✦</span>
-                    <span className="text-gray-700">{strength}</span>
+                    <span className="text-[#A1887F] mr-2">✦</span>
+                    <span className="text-[#2E2E2E]">{strength}</span>
                   </li>
                 ))}
               </ul>
             </div>
             
-            <p className="text-gray-700 mb-6">
-              <span className="font-semibold text-purple-800">Favorite Tools:</span> Empathy, clear communication, Canva, legal research, and storytelling.
+            <p className="text-[#2E2E2E] mb-6">
+              <span className="font-semibold text-[#708238]">Favorite Tools:</span> Empathy, clear communication, Canva, legal research, and storytelling.
             </p>
             
             <div className="mb-8">
-              <h4 className="text-lg font-semibold text-purple-800 mb-3">Fun Facts:</h4>
+              <h4 className="text-lg font-semibold text-[#708238] mb-3">Fun Facts:</h4>
               <ul className="space-y-2">
                 {funFacts.map((fact, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-purple-600 mr-2">✦</span>
-                    <span className="text-gray-700">{fact}</span>
+                    <span className="text-[#A1887F] mr-2">✦</span>
+                    <span className="text-[#2E2E2E]">{fact}</span>
                   </li>
                 ))}
               </ul>
@@ -61,13 +61,13 @@ export default function About() {
             <div className="flex space-x-4">
               <a 
                 href="#" 
-                className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300"
+                className="bg-[#A1887F] hover:bg-[#8D776F] text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300"
               >
                 Contact Char
               </a>
               <a 
                 href="#" 
-                className="bg-white hover:bg-gray-100 text-purple-700 font-semibold py-2 px-6 rounded-lg shadow-md border border-purple-200 transition duration-300"
+                className="bg-[#FAF9F6] hover:bg-[#F8E1DA] text-[#708238] font-semibold py-2 px-6 rounded-lg shadow-md border border-[#A1887F] transition duration-300"
               >
                 LinkedIn
               </a>

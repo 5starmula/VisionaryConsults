@@ -8,26 +8,26 @@ export default function Hero() {
   return (
     <div className="relative w-full">
       <Header />
-      <div id="hero" className="bg-gradient-to-r from-purple-100 to-indigo-100 min-h-screen flex items-center">
+      <div id="hero" className="bg-gradient-to-r from-[#FAF9F6] to-[#F8E1DA] min-h-screen flex items-center">
         <div className="container mx-auto px-4 py-20 md:py-32">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
-              <h1 className="text-4xl md:text-6xl font-bold text-purple-900 mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-[#2E2E2E] mb-6">
                 Welcome to Visionary Consults
               </h1>
-              <p className="text-gray-600 mb-8 text-lg">
+              <p className="text-[#2E2E2E] mb-8 text-lg">
                 Your trusted partner in professional growth, creative development, and purposeful living. Whether you are navigating a career crossroads, building a business, or seeking tools to empower young minds, you're in the right place
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
                   href="#what-we-do" 
-                  className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 text-center"
+                  className="bg-[#A1887F] hover:bg-[#8D776F] text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 text-center"
                 >
                   Our Services
                 </a>
                 <a 
                   href="#about" 
-                  className="bg-white hover:bg-gray-100 text-purple-700 font-semibold py-3 px-6 rounded-lg shadow-md border border-purple-200 transition duration-300 text-center"
+                  className="bg-[#FAF9F6] hover:bg-[#F8E1DA] text-[#708238] font-semibold py-3 px-6 rounded-lg shadow-md border border-[#A1887F] transition duration-300 text-center"
                 >
                   About Char
                 </a>

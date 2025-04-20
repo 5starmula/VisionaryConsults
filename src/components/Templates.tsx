@@ -27,28 +27,28 @@ export default function Templates() {
   ];
 
   return (
-    <section id="templates" className="py-20 bg-white">
+    <section id="templates" className="py-20 bg-[#FAF9F6]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-purple-900 mb-4">Templates</h2>
-          <div className="w-24 h-1 bg-purple-600 mx-auto mb-6"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#2E2E2E] mb-4">Templates</h2>
+          <div className="w-24 h-1 bg-[#A1887F] mx-auto mb-6"></div>
+          <p className="text-[#2E2E2E] max-w-2xl mx-auto">
             Practical templates and resources to help you optimize your professional life and business operations.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {templates.map((template, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 border border-gray-100">
-              <div className="h-48 bg-gray-200 flex items-center justify-center">
-                <p className="text-gray-500">Template Image Placeholder</p>
+            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 border border-[#F8E1DA]">
+              <div className="h-48 bg-[#F8E1DA] flex items-center justify-center">
+                <p className="text-[#2E2E2E]">Template Image Placeholder</p>
               </div>
               <div className="p-5">
-                <h3 className="text-lg font-bold text-purple-800 mb-2">{template.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{template.description}</p>
+                <h3 className="text-lg font-bold text-[#708238] mb-2">{template.title}</h3>
+                <p className="text-[#2E2E2E] text-sm mb-4">{template.description}</p>
                 <a 
                   href="#" 
-                  className="inline-block bg-pink-500 hover:bg-pink-600 text-white font-medium py-2 px-4 rounded-lg text-sm transition duration-300"
+                  className="inline-block bg-[#A1887F] hover:bg-[#8D776F] text-white font-medium py-2 px-4 rounded-lg text-sm transition duration-300"
                 >
                   Shop on Etsy
                 </a>
@@ -63,7 +63,7 @@ export default function Templates() {
             href="https://etsy.com/shop/visionaryconsults" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-300"
+            className="inline-block bg-[#708238] hover:bg-[#5F6E30] text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-300"
           >
             View All Templates
           </a>

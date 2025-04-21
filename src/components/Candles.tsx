@@ -2,6 +2,9 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import candle1Img from '../../public/images/Candle1.jpeg';
+import candle2Img from '../../public/images/Candle2.jpeg';
+import candleLogoImg from '../../public/images/Candle.png';
 
 export default function Candles() {
   const [image1Error, setImage1Error] = useState(false);
@@ -15,7 +18,7 @@ export default function Candles() {
           <div className="flex flex-col md:flex-row items-center justify-center mb-16">
             <div className="mr-0 md:mr-6 mb-6 md:mb-0">
               <Image 
-                src="/images/Candle.png" 
+                src={candleLogoImg} 
                 alt="Char's Candle Bar Logo" 
                 width={120} 
                 height={120}
@@ -48,33 +51,21 @@ export default function Candles() {
             {/* Image content */}
             <div className="md:w-1/2 order-1 md:order-2 space-y-6">
               <div className="bg-white overflow-hidden rounded-xl shadow-lg p-2">
-                {image1Error ? (
-                  <div className="flex items-center justify-center h-64 bg-gray-100 text-gray-500">
-                    Image could not be loaded
-                  </div>
-                ) : (
-                  <img
-                    src="images/Candle1.jpeg"
-                    alt="Luxury handcrafted candle"
-                    className="w-full h-auto rounded-lg"
-                    onError={() => setImage1Error(true)}
-                  />
-                )}
+                <Image
+                  src={candle1Img}
+                  alt="Luxury handcrafted candle"
+                  className="w-full h-auto rounded-lg"
+                  priority
+                />
               </div>
               
               <div className="bg-white overflow-hidden rounded-xl shadow-lg p-2">
-                {image2Error ? (
-                  <div className="flex items-center justify-center h-64 bg-gray-100 text-gray-500">
-                    Image could not be loaded
-                  </div>
-                ) : (
-                  <img
-                    src="images/Candle2.jpeg"
-                    alt="Premium scented candle"
-                    className="w-full h-auto rounded-lg"
-                    onError={() => setImage2Error(true)}
-                  />
-                )}
+                <Image
+                  src={candle2Img}
+                  alt="Premium scented candle"
+                  className="w-full h-auto rounded-lg"
+                  priority
+                />
               </div>
             </div>
           </div>

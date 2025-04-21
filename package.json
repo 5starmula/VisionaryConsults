@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
+    "prebuild": "npm install --force",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "critters": "^0.0.23",
+    "framer-motion": "^12.7.4",
     "next": "^15.3.1",
     "nodemailer": "^6.10.1",
     "react": "^19.1.0",

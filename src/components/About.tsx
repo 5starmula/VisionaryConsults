@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import AnimateOnScroll from './utils/AnimateOnScroll';
+import AnimateOnScroll from '@/components/utils/AnimateOnScroll';
 
 export default function About() {
   const coreStrengths = [

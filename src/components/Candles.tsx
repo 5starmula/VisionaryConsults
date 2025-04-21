@@ -1,9 +1,12 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 export default function Candles() {
+  const [image1Error, setImage1Error] = useState(false);
+  const [image2Error, setImage2Error] = useState(false);
+
   return (
     <section id="candles" className="py-24 bg-gradient-to-b from-[#F8E1DA] to-[#FAF9F6]">
       <div className="container mx-auto px-4">
@@ -42,22 +45,36 @@ export default function Candles() {
               </div>
             </div>
             
-            {/* Image content - using regular img tags instead of Next.js Image */}
+            {/* Image content */}
             <div className="md:w-1/2 order-1 md:order-2 space-y-6">
-              <div className="overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src="/images/Candle1.jpeg"
-                  alt="Luxury handcrafted candle"
-                  className="w-full h-auto"
-                />
+              <div className="bg-white overflow-hidden rounded-xl shadow-lg p-2">
+                {image1Error ? (
+                  <div className="flex items-center justify-center h-64 bg-gray-100 text-gray-500">
+                    Image could not be loaded
+                  </div>
+                ) : (
+                  <img
+                    src="images/Candle1.jpeg"
+                    alt="Luxury handcrafted candle"
+                    className="w-full h-auto rounded-lg"
+                    onError={() => setImage1Error(true)}
+                  />
+                )}
               </div>
               
-              <div className="overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src="/images/Candle2.jpeg"
-                  alt="Premium scented candle"
-                  className="w-full h-auto"
-                />
+              <div className="bg-white overflow-hidden rounded-xl shadow-lg p-2">
+                {image2Error ? (
+                  <div className="flex items-center justify-center h-64 bg-gray-100 text-gray-500">
+                    Image could not be loaded
+                  </div>
+                ) : (
+                  <img
+                    src="images/Candle2.jpeg"
+                    alt="Premium scented candle"
+                    className="w-full h-auto rounded-lg"
+                    onError={() => setImage2Error(true)}
+                  />
+                )}
               </div>
             </div>
           </div>

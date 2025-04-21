@@ -42,32 +42,26 @@ export default function Candles() {
             </div>
             
             <div className="order-1 md:order-2 grid grid-cols-1 gap-5">
-              <div className="overflow-hidden rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-[1.02]">
-                <div className="relative h-[300px] md:h-[350px]">
-                  <Image
-                    src="/images/Candle1.jpeg"
-                    alt="Luxury handcrafted candle"
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    quality={90}
-                    priority
-                  />
-                </div>
+              <div className="overflow-hidden rounded-xl shadow-lg">
+                <Image
+                  src="/images/Candle1.jpeg"
+                  alt="Luxury handcrafted candle"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto"
+                  priority
+                />
               </div>
               
-              <div className="overflow-hidden rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-[1.02]">
-                <div className="relative h-[300px] md:h-[350px]">
-                  <Image
-                    src="/images/Candle2.jpeg"
-                    alt="Premium scented candle"
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    quality={90}
-                    priority
-                  />
-                </div>
+              <div className="overflow-hidden rounded-xl shadow-lg">
+                <Image
+                  src="/images/Candle2.jpeg"
+                  alt="Premium scented candle"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto"
+                  priority
+                />
               </div>
             </div>
           </div>

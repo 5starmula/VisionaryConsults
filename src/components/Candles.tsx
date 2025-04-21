@@ -21,6 +21,7 @@ export default function Candles() {
                 height={120}
                 className="rounded-full shadow-md"
                 priority
+                unoptimized
               />
             </div>
             <div className="text-center md:text-left">
@@ -55,6 +56,7 @@ export default function Candles() {
                   height={400}
                   className="w-full h-auto rounded-lg"
                   priority
+                  unoptimized
                 />
               </div>
               
@@ -66,6 +68,7 @@ export default function Candles() {
                   height={400}
                   className="w-full h-auto rounded-lg"
                   priority
+                  unoptimized
                 />
               </div>
             </div>

@@ -32,10 +32,10 @@ export default function Candles() {
             </div>
           </div>
           
-          {/* Main content layout */}
-          <div className="flex flex-col md:flex-row gap-6 items-start mb-10">
+          {/* Stacked layout - Text first */}
+          <div className="flex flex-col gap-6 mb-10">
             {/* Text content */}
-            <div className="md:w-1/2 order-2 md:order-1">
+            <div className="w-full mb-6">
               <div className="bg-white p-6 rounded-xl shadow-lg">
                 <p className="text-[#2E2E2E] text-base leading-relaxed mb-4">
                   At Char's Candle Bar, every candle is a handcrafted experience—infused with love, intention, and a touch of luxury. We pour each candle using premium wax blends and thoughtfully curated fragrances designed to calm, uplift, and inspire. Whether you're setting the mood, creating sacred space, or simply indulging in self-care, our candles offer a soft glow and rich aroma that transforms any room into a sanctuary.
@@ -47,7 +47,7 @@ export default function Candles() {
             </div>
             
             {/* Image content */}
-            <div className="md:w-1/2 order-1 md:order-2 space-y-4">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-white overflow-hidden rounded-xl shadow-lg p-2">
                 <Image
                   src="/images/Candle1.jpeg"

@@ -19,8 +19,8 @@ export default [
   // Add your custom rules
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
-    rules: {
-      'react/no-unescaped-entities': 'off',
+  rules: {
+    'react/no-unescaped-entities': 'off',
     },
   },
 ]; 

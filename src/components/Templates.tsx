@@ -1,113 +1,74 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import AnimateOnScroll from '../components/utils/AnimateOnScroll';
-import CTA from '../components/CTA';
 
 export default function Templates() {
   const templates = [
     {
-      title: "HR Documentation Bundle",
-      description: "Essential templates for HR professionals including policies, onboarding documents, and performance review forms.",
-      image: "/images/template1.jpg",
-      tag: "HR"
+      title: "Hiring & Recruitment Toolkit",
+      image: "template-placeholder.jpg",
+      description: "A complete set of forms and templates to streamline your hiring process from job descriptions to offer letters. Perfect for building a consistent and compliant recruitment workflow."
     },
     {
-      title: "Small Business Toolkit",
-      description: "Comprehensive templates for small business owners, including budget trackers, project plans, and marketing calendars.",
-      image: "/images/template2.jpg",
-      tag: "Business"
+      title: "Employment Management Essentials",
+      image: "template-placeholder.jpg",
+      description: "Everything you need to manage employees with confidence. Includes performance evaluations, disciplinary forms, attendance trackers, and more to support day-to-day HR operations."
     },
     {
-      title: "Career Development Pack",
-      description: "Resume templates, cover letter frameworks, and interview preparation guides for career advancement.",
-      image: "/images/template3.jpg",
-      tag: "Career"
+      title: "Compliance & Policies Starter Pack",
+      image: "template-placeholder.jpg",
+      description: "Protect your business with HR documents aligned with federal labor standards. Includes at-will acknowledgments, confidentiality agreements, code of conduct templates, and basic policy."
+    },
+    {
+      title: "Onboarding & Offboarding Kit",
+      image: "template-placeholder.jpg",
+      description: "Make a lasting first and final impression. Includes checklists, welcome letters, orientation forms, exit interviews, and termination templates for smooth transitions."
     }
   ];
 
   return (
-    <section id="templates" className="py-20 bg-[#FAFAFA]">
-      <div className="container mx-auto px-4 mb-16">
-        <AnimateOnScroll animation="fadeUp">
-          <div className="text-center mb-16">
-            <motion.h2 
-              className="text-3xl md:text-4xl font-bold text-[#2E2E2E] mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              Professional Templates
-            </motion.h2>
-            <motion.div 
-              className="w-24 h-1 bg-[#A1887F] mx-auto mb-6"
-              initial={{ width: 0 }}
-              animate={{ width: 96 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            />
-            <motion.p 
-              className="text-[#2E2E2E] max-w-2xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              Save time and elevate your work with our professionally designed templates. From HR documentation to business planning, we've got you covered.
-            </motion.p>
-          </div>
-        </AnimateOnScroll>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section id="templates" className="py-20 bg-[#FAF9F6]">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#2E2E2E] mb-4">Templates</h2>
+          <div className="w-24 h-1 bg-[#A1887F] mx-auto mb-6"></div>
+          <p className="text-[#2E2E2E] max-w-2xl mx-auto">
+            Practical templates and resources to help you optimize your professional life and business operations.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {templates.map((template, index) => (
-            <AnimateOnScroll key={index} animation="fadeUp" delay={index * 0.2}>
-              <motion.div 
-                className="bg-white rounded-lg shadow-lg overflow-hidden h-full"
-                whileHover={{ 
-                  y: -10,
-                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-                }}
-                transition={{ type: "spring", stiffness: 300, damping: 15 }}
-              >
-                <div className="relative h-48">
-                  <Image
-                    src={template.image}
-                    alt={template.title}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="transition-transform duration-500 hover:scale-105"
-                  />
-                  <div className="absolute top-4 right-4 bg-[#708238] text-white text-xs font-bold py-1 px-2 rounded">
-                    {template.tag}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#2E2E2E] mb-2">{template.title}</h3>
-                  <p className="text-[#5A5A5A] mb-4">{template.description}</p>
-                  <motion.a 
-                    href="#contact"
-                    className="inline-block text-[#A1887F] font-medium hover:text-[#8D776F] transition-colors duration-300"
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 400 }}
-                  >
-                    Learn more →
-                  </motion.a>
-                </div>
-              </motion.div>
-            </AnimateOnScroll>
+            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 border border-[#F8E1DA]">
+              <div className="h-48 bg-[#F8E1DA] flex items-center justify-center">
+                <p className="text-[#2E2E2E]">Template Image Placeholder</p>
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-bold text-[#708238] mb-2">{template.title}</h3>
+                <p className="text-[#2E2E2E] text-sm mb-4">{template.description}</p>
+                <a 
+                  href="#" 
+                  className="inline-block bg-[#A1887F] hover:bg-[#8D776F] text-white font-medium py-2 px-4 rounded-lg text-sm transition duration-300"
+                >
+                  Shop on Etsy
+                </a>
+              </div>
+            </div>
           ))}
         </div>
+        
+        {/* View All Templates button */}
+        <div className="mt-12 text-center">
+          <a 
+            href="https://etsy.com/shop/visionaryconsults" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block bg-[#708238] hover:bg-[#5F6E30] text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-300"
+          >
+            View All Templates
+          </a>
+        </div>
       </div>
-      
-      <CTA 
-        title="Ready to Streamline Your Work?"
-        description="Our templates are designed to save you time and elevate your professional documents. Start using them today."
-        buttonText="Browse Templates"
-        buttonLink="#contact"
-        variant="primary"
-        isExternal={false}
-      />
     </section>
   );
 } 

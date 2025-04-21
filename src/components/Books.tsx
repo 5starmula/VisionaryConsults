@@ -2,118 +2,93 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-import AnimateOnScroll from '../components/utils/AnimateOnScroll';
-import CTA from '../components/CTA';
 
 export default function Books() {
   const books = [
     {
-      title: "The Adventure of Zara",
-      description: "A tale of courage, friendship, and discovery for young readers.",
-      image: "/images/book1.jpg",
-      age: "Ages 5-8"
+      title: "Navigating the Workforce While Black in America",
+      image: "Workforce.jpg",
+      blurb: "Are you a Black professional navigating workplace challenges, discrimination, or career setbacks? The corporate world can be a difficult space for Black professionals, filled with unspoken rules, systemic biases, and career roadblocks. This book provides strategies, legal insights, and workplace survival tactics to help you protect your career, advocate for yourself, and achieve success in corporate America and beyond.",
+      buyLink: "https://www.amazon.com/Navigating-Workforce-While-Black-America/dp/B0DX7DPV1J?ref_=ast_author_dp_rw&dib=eyJ2IjoiMSJ9.AS-hc7y_jdrQpeAxX1NHO_TTDrQz9HPNRwkVFgUugdSaX7uisVVqxu8xF7gs4gjq0EGp9v_4rd6r9luqxPo9G6US8wrDwOyBskmXaEKOKw8.RQeUoz6d3DRafYOXc1jPKKPP8oW05nI"
     },
     {
-      title: "Dreams Take Flight",
-      description: "An inspiring story about believing in yourself and reaching for the stars.",
-      image: "/images/book2.jpg",
-      age: "Ages 6-10"
+      title: "Launch and Thrive: Step-By-Step Side Hustle Guide",
+      image: "Thrive.jpg",
+      blurb: "Unlock Your Entrepreneurial Potential with This Comprehensive Guide! Are you ready to take control of your financial future and build a thriving online business? The Ultimate Online Business Playbook is your step-by-step guide to success, offering you the tools and knowledge you need to launch and grow multiple streams of income. Whether you're just starting out or looking to expand your online empire, this book provides the actionable insights and practical steps you need to succeed.",
+      buyLink: "https://www.amazon.com/Launch-Thrive-Step-Step-Hustle/dp/B0DDKSLTXG?ref_=ast_author_dp_rw&dib=eyJ2IjoiMSJ9.AS-hc7y_jdrQpeAxX1NHO_TTDrQz9HPNRwkVFgUugdSaX7uisVVqxu8xF7gs4gjq0EGp9v_4rd6r9luqxPo9G6US8wrDwOyBskmXaEKOKw8.RQeUoz6d3DRafYOXc1jPKKPP8oW05nIaQn6C2q7OW"
     },
     {
-      title: "Colors of Courage",
-      description: "A vibrant journey through emotions and bravery for children developing emotional intelligence.",
-      image: "/images/book3.jpg",
-      age: "Ages 4-7"
+      title: "The Curious Adventures of Kiki in the Kitchen",
+      image: "Kiki.jpg",
+      blurb: "Welcome to The Curious Adventures of Kiki in the Kitchen Kitten, where the clinks, clatters, and chimes of kitchen life come alive! Join Kiki, a playful kitten, as she explores the magical world of pots, pans, and spoons, turning ordinary kitchen items into a symphony of sounds and fun. Through rhythmic verses that dance off the page, young readers will follow Kiki as she discovers the whisk's whir, the oven's gentle hum, and the tap-tap of tiny paws on the countertop. Each verse not only introduces children to common kitchen tools, but also encourages safe and imaginative play.",
+      buyLink: "https://www.amazon.com/Curious-Adventures-Kiki-Kitchen/dp/B0DH2CV1HZ?ref_=ast_author_dp_rw&dib=eyJ2IjoiMSJ9.AS-hc7y_jdrQpeAxX1NHO_TTDrQz9HPNRwkVFgUugdSaX7uisVVqxu8xF7gs4gjq0EGp9v_4rd6r9luqxPo9G6US8wrDwOyBskmXaEKOKw8.RQeUoz6d3DRafYOXc1jPKKPP8oW05nIaQn6C2q7OWPI&dib_tag=AUTHOR"
+    },
+    {
+      title: "Make sh*t happen",
+      image: "Make.jpg",
+      blurb: "This journal is designed to help you incorporate 30 powerful habits into your daily routine—habits that will not only enhance your physical and mental well-being but also pave the way for a life filled with abundance and prosperity. These habits are carefully curated to provide you with the tools and strategies needed to build a strong foundation for long-term success and happiness.",
+      buyLink: "https://www.amazon.com/Make-that-sh-t-happen/dp/B0DDHD38ZV?ref_=ast_author_dp_rw&dib=eyJ2IjoiMSJ9.AS-hc7y_jdrQpeAxX1NHO_TTDrQz9HPNRwkVFgUugdSaX7uisVVqxu8xF7gs4gjq0EGp9v_4rd6r9luqxPo9G6US8wrDwOyBskmXaEKOKw8.RQeUoz6d3DRafYOXc1jPKKPP8oW05nIaQn6C2q7OWPI&dib_tag=AUTHOR"
     }
   ];
 
   return (
-    <section id="books" className="py-20 bg-gradient-to-r from-[#FBEEE6] to-[#F5F9F0]">
-      <div className="container mx-auto px-4 mb-16">
-        <AnimateOnScroll animation="fadeUp">
-          <div className="text-center mb-16">
-            <motion.h2 
-              className="text-3xl md:text-4xl font-bold text-[#2E2E2E] mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              Children's Books
-            </motion.h2>
-            <motion.div 
-              className="w-24 h-1 bg-[#A1887F] mx-auto mb-6"
-              initial={{ width: 0 }}
-              animate={{ width: 96 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            />
-            <motion.p 
-              className="text-[#2E2E2E] max-w-2xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              Our books inspire young minds through stories that celebrate diversity, resilience, and creativity. Each book comes with engaging activities to extend the learning journey.
-            </motion.p>
-          </div>
-        </AnimateOnScroll>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section id="books" className="py-20 bg-[#FAF9F6]">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#2E2E2E] mb-4">Books</h2>
+          <div className="w-24 h-1 bg-[#A1887F] mx-auto mb-6"></div>
+          <p className="text-[#2E2E2E] max-w-2xl mx-auto">
+            Explore our collection of insightful books designed to help you navigate your professional journey with confidence.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {books.map((book, index) => (
-            <AnimateOnScroll key={index} animation="fadeUp" delay={index * 0.2}>
-              <motion.div 
-                className="bg-white rounded-lg shadow-lg overflow-hidden h-full"
-                whileHover={{ 
-                  rotate: 2,
-                  y: -10,
-                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-                }}
-                transition={{ type: "spring", stiffness: 300, damping: 15 }}
-              >
-                <div className="relative h-64 overflow-hidden">
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.6 }}
-                    className="w-full h-full"
+            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl group flex flex-col h-full">
+              <div className="h-96 bg-[#F8E1DA] flex items-center justify-center relative">
+                {book.image === "book-placeholder.jpg" ? (
+                  <p className="text-[#2E2E2E]">Book Cover Placeholder</p>
+                ) : (
+                  <Image 
+                    src={`/images/${book.image}`} 
+                    alt={book.title}
+                    fill
+                    style={{ objectFit: "contain" }}
+                    priority
+                  />
+                )}
+              </div>
+              <div className="p-4 flex flex-col flex-grow">
+                <h3 className="text-lg font-bold text-[#708238] mb-2 group-hover:text-[#A1887F] transition duration-300">{book.title}</h3>
+                <p className="text-[#2E2E2E] text-sm mb-4 line-clamp-3">
+                  {book.blurb}
+                </p>
+                <div className="mt-auto">
+                  <a 
+                    href={book.buyLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-[#A1887F] hover:bg-[#8D776F] text-white font-semibold py-2 px-4 rounded-lg transition duration-300 text-sm"
                   >
-                    <Image
-                      src={book.image}
-                      alt={book.title}
-                      fill
-                      style={{ objectFit: 'cover' }}
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                  </motion.div>
-                  <div className="absolute top-4 right-4 bg-[#708238] text-white text-xs font-bold py-1 px-2 rounded">
-                    {book.age}
-                  </div>
+                    Buy on Amazon
+                  </a>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#708238] mb-2">{book.title}</h3>
-                  <p className="text-[#2E2E2E] mb-4">{book.description}</p>
-                  <motion.a 
-                    href="#contact"
-                    className="inline-block text-[#A1887F] font-medium hover:text-[#8D776F] transition-colors duration-300"
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 400 }}
-                  >
-                    Explore book →
-                  </motion.a>
-                </div>
-              </motion.div>
-            </AnimateOnScroll>
+              </div>
+            </div>
           ))}
         </div>
+        
+        <div className="mt-16 text-center">
+          <a 
+            href="https://www.amazon.com/stores/Char-Vernon/author/B0DWJHMLH5?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true&ccs_id=6deca303-28b8-4091-b688-6e5c1177fce9"
+            target="_blank"
+            rel="noopener noreferrer" 
+            className="inline-block bg-white text-[#708238] border-2 border-[#A1887F] hover:bg-[#F8E1DA] font-semibold py-3 px-10 rounded-lg shadow-md transition duration-300"
+          >
+            See All Books
+          </a>
+        </div>
       </div>
-      
-      <CTA 
-        title="Inspiring Young Readers"
-        description="Our children's books promote emotional intelligence, diversity, and resilience through engaging storytelling and interactive activities."
-        buttonText="Explore Our Books"
-        buttonLink="#contact"
-        variant="secondary"
-        isExternal={false}
-      />
     </section>
   );
 } 

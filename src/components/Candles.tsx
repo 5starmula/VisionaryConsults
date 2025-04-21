@@ -28,9 +28,10 @@ export default function Candles() {
             </div>
           </div>
           
-          {/* Main content with images and text */}
-          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center mb-16">
-            <div className="order-2 md:order-1">
+          {/* Main content layout */}
+          <div className="flex flex-col md:flex-row gap-10 items-start mb-16">
+            {/* Text content */}
+            <div className="md:w-1/2 order-2 md:order-1">
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <p className="text-[#2E2E2E] text-lg leading-relaxed mb-6">
                   At Char's Candle Bar, every candle is a handcrafted experience—infused with love, intention, and a touch of luxury. We pour each candle using premium wax blends and thoughtfully curated fragrances designed to calm, uplift, and inspire. Whether you're setting the mood, creating sacred space, or simply indulging in self-care, our candles offer a soft glow and rich aroma that transforms any room into a sanctuary.
@@ -41,26 +42,21 @@ export default function Candles() {
               </div>
             </div>
             
-            <div className="order-1 md:order-2 grid grid-cols-1 gap-5">
+            {/* Image content - using regular img tags instead of Next.js Image */}
+            <div className="md:w-1/2 order-1 md:order-2 space-y-6">
               <div className="overflow-hidden rounded-xl shadow-lg">
-                <Image
+                <img
                   src="/images/Candle1.jpeg"
                   alt="Luxury handcrafted candle"
-                  width={800}
-                  height={600}
                   className="w-full h-auto"
-                  priority
                 />
               </div>
               
               <div className="overflow-hidden rounded-xl shadow-lg">
-                <Image
+                <img
                   src="/images/Candle2.jpeg"
                   alt="Premium scented candle"
-                  width={800}
-                  height={600}
                   className="w-full h-auto"
-                  priority
                 />
               </div>
             </div>

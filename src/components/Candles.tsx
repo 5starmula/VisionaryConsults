@@ -31,24 +31,28 @@ export default function Candles() {
               </p>
             </div>
             
-            {/* Image content with paths to root public directory */}
+            {/* Image content with fixed heights */}
             <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* First image card */}
-              <div className="bg-white overflow-hidden rounded-xl shadow-lg p-2" style={{ minHeight: "200px" }}>
-                <img
-                  src="/Candle1.jpeg"
-                  alt="Luxury handcrafted candle"
-                  className="w-full h-auto rounded-lg object-cover"
-                />
+              <div className="bg-white overflow-hidden rounded-xl shadow-lg p-2" style={{ height: "350px" }}>
+                <div className="w-full h-full flex items-center justify-center">
+                  <img
+                    src="/Candle1.jpeg"
+                    alt="Luxury handcrafted candle"
+                    className="max-h-full w-auto object-contain"
+                  />
+                </div>
               </div>
               
               {/* Second image card */}
-              <div className="bg-white overflow-hidden rounded-xl shadow-lg p-2" style={{ minHeight: "200px" }}>
-                <img
-                  src="/Candle2.jpeg" 
-                  alt="Premium scented candle"
-                  className="w-full h-auto rounded-lg object-cover"
-                />
+              <div className="bg-white overflow-hidden rounded-xl shadow-lg p-2" style={{ height: "350px" }}>
+                <div className="w-full h-full flex items-center justify-center">
+                  <img
+                    src="/Candle2.jpeg" 
+                    alt="Premium scented candle"
+                    className="max-h-full w-auto object-contain"
+                  />
+                </div>
               </div>
             </div>
           </div>

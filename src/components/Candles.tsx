@@ -2,9 +2,6 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import candle1Img from '../../public/images/Candle1.jpeg';
-import candle2Img from '../../public/images/Candle2.jpeg';
-import candleLogoImg from '../../public/images/Candle.png';
 
 export default function Candles() {
   const [image1Error, setImage1Error] = useState(false);
@@ -18,7 +15,7 @@ export default function Candles() {
           <div className="flex flex-col md:flex-row items-center justify-center mb-16">
             <div className="mr-0 md:mr-6 mb-6 md:mb-0">
               <Image 
-                src={candleLogoImg} 
+                src="/images/Candle.png" 
                 alt="Char's Candle Bar Logo" 
                 width={120} 
                 height={120}
@@ -52,8 +49,10 @@ export default function Candles() {
             <div className="md:w-1/2 order-1 md:order-2 space-y-6">
               <div className="bg-white overflow-hidden rounded-xl shadow-lg p-2">
                 <Image
-                  src={candle1Img}
+                  src="/images/Candle1.jpeg"
                   alt="Luxury handcrafted candle"
+                  width={600}
+                  height={400}
                   className="w-full h-auto rounded-lg"
                   priority
                 />
@@ -61,8 +60,10 @@ export default function Candles() {
               
               <div className="bg-white overflow-hidden rounded-xl shadow-lg p-2">
                 <Image
-                  src={candle2Img}
+                  src="/images/Candle2.jpeg"
                   alt="Premium scented candle"
+                  width={600}
+                  height={400}
                   className="w-full h-auto rounded-lg"
                   priority
                 />

@@ -1,75 +1,105 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import AnimateOnScroll from './utils/AnimateOnScroll';
+import CTA from './CTA';
 
 export default function Candles() {
   return (
-    <section id="candles" className="py-16 bg-gradient-to-b from-[#F8E1DA] to-[#FAF9F6]">
+    <section id="candles" className="py-16 bg-[#FFF6F3]">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
-          {/* Logo */}
-          <div className="flex justify-center mb-10">
-            <img 
-              src="/Candle.png" 
-              alt="Char's Candle Bar Logo" 
-              width={300} 
-              height={300}
-              className="shadow-md"
-            />
+        <AnimateOnScroll animation="fadeUp">
+          <div className="flex items-center justify-center mb-8">
+            <motion.div 
+              className="mr-4"
+              whileHover={{ rotate: [0, -10, 0], transition: { duration: 0.5 } }}
+            >
+              <Image
+                src="/Candle.png"
+                alt="Visionary Consults Candle Logo"
+                width={60}
+                height={60}
+              />
+            </motion.div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#2E2E2E]">
+              Luxury Candles
+            </h2>
           </div>
           
-          {/* Content */}
-          <div className="mb-10">
-            {/* Text */}
-            <div className="mb-8 px-4">
-              <p className="text-[#2E2E2E] text-base leading-relaxed mb-4">
-                At Char's Candle Bar, every candle is a handcrafted experience—infused with love, intention, and a touch of luxury. We pour each candle using premium wax blends and thoughtfully curated fragrances designed to calm, uplift, and inspire. Whether you're setting the mood, creating sacred space, or simply indulging in self-care, our candles offer a soft glow and rich aroma that transforms any room into a sanctuary.
+          <div className="max-w-4xl mx-auto mb-12">
+            <AnimateOnScroll animation="fadeUp" delay={0.1}>
+              <p className="text-center text-[#2E2E2E] mb-12">
+                Indulge in the soothing ambiance of our handcrafted luxury candles, designed to transform your space and elevate your self-care routine. Each candle is carefully crafted with premium ingredients to create a perfect blend of aesthetics and aromatherapy.
               </p>
-              <p className="text-[#708238] text-lg font-medium text-center italic">
-                Blush pink dreams. Champagne vibes. Golden energy—this is the Char way.
-              </p>
-            </div>
+            </AnimateOnScroll>
             
-            {/* Images */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-white rounded-xl shadow-lg p-2" style={{ height: "350px" }}>
-                <div className="w-full h-full flex items-center justify-center">
-                  <img
-                    src="/Candle1.jpeg"
-                    alt="Luxury handcrafted candle"
-                    className="max-h-full w-auto object-contain"
-                  />
-                </div>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <AnimateOnScroll animation="fadeRight" delay={0.2}>
+                <motion.div 
+                  className="bg-white rounded-xl shadow-lg overflow-hidden"
+                  whileHover={{ 
+                    y: -10,
+                    boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+                  }}
+                  transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                >
+                  <div className="relative h-[350px]">
+                    <Image
+                      src="/Candle1.jpeg"
+                      alt="Luxury handcrafted candle"
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="transform transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-4 bg-white">
+                    <h3 className="text-xl font-bold text-[#708238]">Serenity Collection</h3>
+                    <p className="text-[#2E2E2E] text-sm">Pure soy wax with essential oils</p>
+                  </div>
+                </motion.div>
+              </AnimateOnScroll>
               
-              <div className="bg-white rounded-xl shadow-lg p-2" style={{ height: "350px" }}>
-                <div className="w-full h-full flex items-center justify-center">
-                  <img
-                    src="/Candle2.jpeg" 
-                    alt="Premium scented candle"
-                    className="max-h-full w-auto object-contain"
-                  />
-                </div>
-              </div>
+              <AnimateOnScroll animation="fadeLeft" delay={0.3}>
+                <motion.div 
+                  className="bg-white rounded-xl shadow-lg overflow-hidden"
+                  whileHover={{ 
+                    y: -10,
+                    boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+                  }}
+                  transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                >
+                  <div className="relative h-[350px]">
+                    <Image
+                      src="/Candle2.jpeg"
+                      alt="Premium scented candle"
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="transform transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-4 bg-white">
+                    <h3 className="text-xl font-bold text-[#708238]">Harmony Collection</h3>
+                    <p className="text-[#2E2E2E] text-sm">Long-burning coconut blend with premium fragrance</p>
+                  </div>
+                </motion.div>
+              </AnimateOnScroll>
             </div>
           </div>
-
-          {/* CTA */}
-          <div className="text-center">
-            <a 
-              href="https://buy.stripe.com/test_14k5nk8Ot3Nl7PG4gg" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-[#A1887F] hover:bg-[#8D776F] text-white font-medium py-2 px-8 rounded-full shadow-lg transition-transform duration-300 hover:-translate-y-1"
-            >
-              Buy Candles Now
-            </a>
-            <p className="mt-3 text-[#2E2E2E] text-xs">
-              Handcrafted with love. Limited quantities available.
-            </p>
-          </div>
-        </div>
+        </AnimateOnScroll>
       </div>
+      
+      <CTA 
+        title="Elevate Your Space"
+        description="Transform your environment with our handcrafted luxury candles, designed to create moments of peace and tranquility."
+        buttonText="Shop Candles Now"
+        buttonLink="https://buy.stripe.com/test_14k5nk8Ot3Nl7PG4gg"
+        variant="secondary"
+        isExternal={true}
+      />
     </section>
   );
 } 

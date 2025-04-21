@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import { motion } from 'framer-motion';
+import AnimateOnScroll from './utils/AnimateOnScroll';
 
 export default function WhatWeDo() {
   const services = [
@@ -24,21 +26,38 @@ export default function WhatWeDo() {
   return (
     <section id="what-we-do" className="py-20 bg-[#FAF9F6]">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2E2E2E] mb-4">What We Do</h2>
-          <div className="w-24 h-1 bg-[#A1887F] mx-auto mb-6"></div>
-          <p className="text-[#2E2E2E] max-w-2xl mx-auto">
-            At Visionary Consults, we believe in blending passion with purpose. Our services and offerings span across:
-          </p>
-        </div>
+        <AnimateOnScroll animation="fadeUp">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#2E2E2E] mb-4">What We Do</h2>
+            <div className="w-24 h-1 bg-[#A1887F] mx-auto mb-6"></div>
+            <p className="text-[#2E2E2E] max-w-2xl mx-auto">
+              At Visionary Consults, we believe in blending passion with purpose. Our services and offerings span across:
+            </p>
+          </div>
+        </AnimateOnScroll>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300 border border-[#F8E1DA] group hover:border-[#A1887F]">
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-bold text-[#708238] mb-3 group-hover:text-[#A1887F] transition duration-300">{service.title}</h3>
-              <p className="text-[#2E2E2E]">{service.description}</p>
-            </div>
+            <AnimateOnScroll key={index} animation="fadeUp" delay={index * 0.2}>
+              <motion.div 
+                className="bg-white rounded-lg shadow-lg p-8 h-full border border-[#F8E1DA] group hover:border-[#A1887F]"
+                whileHover={{ 
+                  y: -10,
+                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+                }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
+              >
+                <motion.div 
+                  className="text-4xl mb-4"
+                  whileHover={{ scale: 1.2, rotate: 5 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  {service.icon}
+                </motion.div>
+                <h3 className="text-xl font-bold text-[#708238] mb-3 group-hover:text-[#A1887F] transition duration-300">{service.title}</h3>
+                <p className="text-[#2E2E2E]">{service.description}</p>
+              </motion.div>
+            </AnimateOnScroll>
           ))}
         </div>
       </div>

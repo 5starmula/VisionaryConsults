@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import AnimateOnScroll from '@/components/utils/AnimateOnScroll';
+import AnimateOnScroll from '../components/utils/AnimateOnScroll';
 
 export default function About() {
   const coreStrengths = [
@@ -21,7 +21,7 @@ export default function About() {
 
   const listItemVariants = {
     hidden: { opacity: 0, x: -10 },
-    visible: (i) => ({
+    visible: (i: number) => ({
       opacity: 1,
       x: 0,
       transition: {

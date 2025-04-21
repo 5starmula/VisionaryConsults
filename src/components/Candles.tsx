@@ -3,8 +3,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import AnimateOnScroll from '@/components/utils/AnimateOnScroll';
-import CTA from '@/components/CTA';
+import AnimateOnScroll from '../components/utils/AnimateOnScroll';
+import CTA from '../components/CTA';
 
 export default function Candles() {
   return (

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import AnimateOnScroll from '@/components/utils/AnimateOnScroll';
+import AnimateOnScroll from '../components/utils/AnimateOnScroll';
 
 export default function WhatWeDo() {
   const services = [

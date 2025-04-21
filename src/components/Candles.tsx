@@ -37,12 +37,6 @@ export default function Candles() {
 
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2E2E2E] mb-4">Char's Candle Bar</h2>
-            <div className="w-24 h-1 bg-[#A1887F] mx-auto mb-6"></div>
-          </div>
-
           {/* Logo */}
           <ScrollReveal variants={scaleUp}>
             <div className="flex justify-center mb-10">

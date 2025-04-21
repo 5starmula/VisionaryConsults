@@ -13,9 +13,9 @@ export default function Candles() {
             <Image 
               src="/images/Candle.png" 
               alt="Char's Candle Bar Logo" 
-              width={150} 
-              height={150}
-              className="rounded-full shadow-md"
+              width={300} 
+              height={300}
+              className="shadow-md"
               priority
               unoptimized
             />

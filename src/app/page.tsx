@@ -7,6 +7,7 @@ import About from '../components/About';
 import BookConsultation from '../components/BookConsultation';
 import Books from '../components/Books';
 import Templates from '../components/Templates';
+import Candles from '../components/Candles';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <BookConsultation />
       <Books />
       <Templates />
+      <Candles />
       <Footer />
     </main>
   );

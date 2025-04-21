@@ -58,6 +58,9 @@ export default function Header() {
           <Link href="#templates" className="text-[#F8E1DA] hover:text-white transition duration-300">
             Templates
           </Link>
+          <Link href="#candles" className="text-[#F8E1DA] hover:text-white transition duration-300">
+            Candles
+          </Link>
           <a 
             href="https://buy.stripe.com/test_14k5nk8Ot3Nl7PG4gg" 
             target="_blank" 
@@ -90,6 +93,9 @@ export default function Header() {
             </Link>
             <Link href="#templates" className="text-[#F8E1DA] hover:text-white transition duration-300" onClick={() => setIsMenuOpen(false)}>
               Templates
+            </Link>
+            <Link href="#candles" className="text-[#F8E1DA] hover:text-white transition duration-300" onClick={() => setIsMenuOpen(false)}>
+              Candles
             </Link>
             <a 
               href="https://buy.stripe.com/test_14k5nk8Ot3Nl7PG4gg" 

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 
 export default function Candles() {
@@ -35,19 +35,21 @@ export default function Candles() {
             
             {/* Image content */}
             <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-white overflow-hidden rounded-xl shadow-lg p-2">
+              {/* First image card */}
+              <div className="bg-white overflow-hidden rounded-xl shadow-lg p-2" style={{ minHeight: "200px" }}>
                 <img
-                  src="/images/Candle1.jpeg"
+                  src="./images/Candle1.jpeg"
                   alt="Luxury handcrafted candle"
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-lg object-cover"
                 />
               </div>
               
-              <div className="bg-white overflow-hidden rounded-xl shadow-lg p-2">
+              {/* Second image card */}
+              <div className="bg-white overflow-hidden rounded-xl shadow-lg p-2" style={{ minHeight: "200px" }}>
                 <img
-                  src="/images/Candle2.jpeg"
+                  src="./images/Candle2.jpeg" 
                   alt="Premium scented candle"
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-lg object-cover"
                 />
               </div>
             </div>

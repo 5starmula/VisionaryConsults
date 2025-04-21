@@ -37,28 +37,52 @@ export default function Candles() {
 
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          {/* Logo */}
-          <ScrollReveal variants={scaleUp}>
-            <div className="flex justify-center mb-10">
-              <motion.div 
-                className="rounded-full bg-white p-3 shadow-lg"
-                whileHover={{ 
-                  boxShadow: "0 15px 30px rgba(0,0,0,0.1)",
-                  y: -5,
-                  rotate: [0, -5, 5, -5, 0], 
-                  transition: { duration: 0.5 }
-                }}
-              >
-                <Image 
-                  src="/Candle.png" 
-                  alt="Char's Candle Bar Logo" 
-                  width={280} 
-                  height={280}
-                  className="rounded-full"
-                />
-              </motion.div>
-            </div>
-          </ScrollReveal>
+          {/* Animated Header */}
+          <div className="text-center mb-12">
+            <motion.h2 
+              className="text-3xl md:text-4xl font-bold text-[#2E2E2E] mb-4"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ 
+                opacity: 1, 
+                y: 0,
+                transition: { 
+                  duration: 0.8,
+                  ease: "easeOut",
+                }
+              }}
+              whileInView={{
+                textShadow: [
+                  "0 0 0px rgba(161, 136, 127, 0)",
+                  "0 0 5px rgba(161, 136, 127, 0.5)",
+                  "0 0 0px rgba(161, 136, 127, 0)"
+                ],
+                transition: {
+                  duration: 2.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }
+              }}
+            >
+              Char's Candle Bar
+            </motion.h2>
+            <motion.div 
+              className="w-24 h-1 bg-[#A1887F] mx-auto mb-6"
+              initial={{ width: 0 }}
+              animate={{ width: "6rem" }}
+              transition={{ duration: 1, delay: 0.5 }}
+            />
+          </div>
+
+          {/* Logo - removed from circle and animations */}
+          <div className="flex justify-center mb-10">
+            <Image 
+              src="/Candle.png" 
+              alt="Char's Candle Bar Logo" 
+              width={280} 
+              height={280}
+              className="max-w-full h-auto"
+            />
+          </div>
           
           {/* Content */}
           <div className="mb-14">

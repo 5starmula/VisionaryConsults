@@ -11,9 +11,9 @@ export default function Templates() {
       description: "A complete set of forms and templates to streamline your hiring process from job descriptions to offer letters. Perfect for building a consistent and compliant recruitment workflow."
     },
     {
-      title: "Employment Management Essentials",
-      image: "template-placeholder.jpg",
-      description: "Everything you need to manage employees with confidence. Includes performance evaluations, disciplinary forms, attendance trackers, and more to support day-to-day HR operations."
+      title: "HR for Job Seekers",
+      image: "Seeker.png",
+      description: "Professional tools that include resume templates, cover letters, job application trackers, and interview prep worksheets."
     },
     {
       title: "Compliance & Policies Starter Pack",

@@ -57,21 +57,6 @@ export default function About() {
                 ))}
               </ul>
             </div>
-            
-            <div className="flex space-x-4">
-              <a 
-                href="#" 
-                className="bg-[#A1887F] hover:bg-[#8D776F] text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300"
-              >
-                Contact Char
-              </a>
-              <a 
-                href="#" 
-                className="bg-[#FAF9F6] hover:bg-[#F8E1DA] text-[#708238] font-semibold py-2 px-6 rounded-lg shadow-md border border-[#A1887F] transition duration-300"
-              >
-                LinkedIn
-              </a>
-            </div>
           </div>
           
           <div className="order-1 md:order-2 flex justify-center">

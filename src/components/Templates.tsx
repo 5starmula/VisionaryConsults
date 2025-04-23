@@ -46,7 +46,7 @@ export default function Templates() {
                   <p className="text-[#2E2E2E]">Template Image Placeholder</p>
                 ) : (
                   <Image
-                    src={`/${template.image}`}
+                    src={`/images/${template.image}`}
                     alt={template.title}
                     fill
                     style={{ objectFit: "contain" }}

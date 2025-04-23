@@ -7,7 +7,7 @@ export default function Templates() {
   const templates = [
     {
       title: "Hiring & Recruitment Toolkit",
-      image: "template-placeholder.jpg",
+      image: "Hiring.png",
       description: "A complete set of forms and templates to streamline your hiring process from job descriptions to offer letters. Perfect for building a consistent and compliant recruitment workflow."
     },
     {
@@ -22,7 +22,7 @@ export default function Templates() {
     },
     {
       title: "Onboarding & Offboarding Kit",
-      image: "template-placeholder.jpg",
+      image: "Onboarding.png",
       description: "Make a lasting first and final impression. Includes checklists, welcome letters, orientation forms, exit interviews, and termination templates for smooth transitions."
     }
   ];

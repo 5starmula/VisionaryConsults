@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export default function Templates() {
   const templates = [
@@ -16,7 +17,7 @@ export default function Templates() {
     },
     {
       title: "Compliance & Policies Starter Pack",
-      image: "template-placeholder.jpg",
+      image: "Compliance.png",
       description: "Protect your business with HR documents aligned with federal labor standards. Includes at-will acknowledgments, confidentiality agreements, code of conduct templates, and basic policy."
     },
     {
@@ -40,8 +41,17 @@ export default function Templates() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {templates.map((template, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 border border-[#F8E1DA]">
-              <div className="h-48 bg-[#F8E1DA] flex items-center justify-center">
-                <p className="text-[#2E2E2E]">Template Image Placeholder</p>
+              <div className="h-48 bg-[#F8E1DA] flex items-center justify-center relative">
+                {template.image === "template-placeholder.jpg" ? (
+                  <p className="text-[#2E2E2E]">Template Image Placeholder</p>
+                ) : (
+                  <Image
+                    src={`/${template.image}`}
+                    alt={template.title}
+                    fill
+                    style={{ objectFit: "contain" }}
+                  />
+                )}
               </div>
               <div className="p-5">
                 <h3 className="text-lg font-bold text-[#708238] mb-2">{template.title}</h3>

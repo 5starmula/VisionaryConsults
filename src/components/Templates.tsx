@@ -40,8 +40,8 @@ export default function Templates() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {templates.map((template, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 border border-[#F8E1DA]">
-              <div className="h-48 bg-[#F8E1DA] flex items-center justify-center relative">
+            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-[#F8E1DA]">
+              <div className="h-96 bg-[#F8E1DA] flex items-center justify-center relative">
                 {template.image === "template-placeholder.jpg" ? (
                   <p className="text-[#2E2E2E]">Template Image Placeholder</p>
                 ) : (
@@ -50,18 +50,21 @@ export default function Templates() {
                     alt={template.title}
                     fill
                     style={{ objectFit: "contain" }}
+                    priority
                   />
                 )}
               </div>
-              <div className="p-5">
-                <h3 className="text-lg font-bold text-[#708238] mb-2">{template.title}</h3>
-                <p className="text-[#2E2E2E] text-sm mb-4">{template.description}</p>
-                <a 
-                  href="#" 
-                  className="inline-block bg-[#A1887F] hover:bg-[#8D776F] text-white font-medium py-2 px-4 rounded-lg text-sm transition duration-300"
-                >
-                  Shop on Etsy
-                </a>
+              <div className="p-5 flex flex-col flex-grow">
+                <h3 className="text-lg font-bold text-[#708238] mb-2 group-hover:text-[#A1887F] transition duration-300">{template.title}</h3>
+                <p className="text-[#2E2E2E] text-sm mb-4 line-clamp-3">{template.description}</p>
+                <div className="mt-auto">
+                  <a 
+                    href="#" 
+                    className="inline-block bg-[#A1887F] hover:bg-[#8D776F] text-white font-semibold py-2 px-4 rounded-lg transition duration-300 text-sm"
+                  >
+                    Shop on Etsy
+                  </a>
+                </div>
               </div>
             </div>
           ))}

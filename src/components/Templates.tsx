@@ -8,22 +8,26 @@ export default function Templates() {
     {
       title: "Hiring & Recruitment Toolkit",
       image: "Hiring.png",
-      description: "A complete set of forms and templates to streamline your hiring process from job descriptions to offer letters. Perfect for building a consistent and compliant recruitment workflow."
+      description: "A complete set of forms and templates to streamline your hiring process from job descriptions to offer letters. Perfect for building a consistent and compliant recruitment workflow.",
+      url: "https://www.etsy.com/listing/4296049993/hiring-recruitment-toolkit?ref=shop_home_active_1&logging_key=af170f3358efdfd8bc711bcb8943ce7dc8841825%3A4296049993"
     },
     {
       title: "Employment Management Essentials",
       image: "MANAGEMENT.png",
-      description: "Everything you need to manage employees with confidence. Includes performance evaluations, disciplinary forms, attendance trackers, and more to support day-to-day HR operations."
+      description: "Everything you need to manage employees with confidence. Includes performance evaluations, disciplinary forms, attendance trackers, and more to support day-to-day HR operations.",
+      url: "#"
     },
     {
       title: "Compliance & Policies Starter Pack",
       image: "Compliance.png",
-      description: "Protect your business with HR documents aligned with federal labor standards. Includes at-will acknowledgments, confidentiality agreements, code of conduct templates, and basic policy."
+      description: "Protect your business with HR documents aligned with federal labor standards. Includes at-will acknowledgments, confidentiality agreements, code of conduct templates, and basic policy.",
+      url: "#"
     },
     {
       title: "Onboarding & Offboarding Kit",
       image: "Onboarding.png",
-      description: "Make a lasting first and final impression. Includes checklists, welcome letters, orientation forms, exit interviews, and termination templates for smooth transitions."
+      description: "Make a lasting first and final impression. Includes checklists, welcome letters, orientation forms, exit interviews, and termination templates for smooth transitions.",
+      url: "#"
     }
   ];
 
@@ -59,7 +63,9 @@ export default function Templates() {
                 <p className="text-[#2E2E2E] text-sm mb-4 line-clamp-3">{template.description}</p>
                 <div className="mt-auto">
                   <a 
-                    href="#" 
+                    href={template.url}
+                    target="_blank" 
+                    rel="noopener noreferrer"
                     className="inline-block bg-[#A1887F] hover:bg-[#8D776F] text-white font-semibold py-2 px-4 rounded-lg transition duration-300 text-sm"
                   >
                     Shop on Etsy

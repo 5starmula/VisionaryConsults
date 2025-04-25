@@ -15,7 +15,7 @@ export default function Templates() {
       title: "Employment Management Essentials",
       image: "MANAGEMENT.png",
       description: "Everything you need to manage employees with confidence. Includes performance evaluations, disciplinary forms, attendance trackers, and more to support day-to-day HR operations.",
-      url: "#"
+      url: "https://www.etsy.com/listing/4296033747/hr-employee-management?ref=shop_home_active_3&logging_key=d8f13418beb1a8b4acfc67e75d2cc66e0b881fef%3A4296033747"
     },
     {
       title: "Compliance & Policies Starter Pack",

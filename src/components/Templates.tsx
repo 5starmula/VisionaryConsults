@@ -21,7 +21,7 @@ export default function Templates() {
       title: "Compliance & Policies Starter Pack",
       image: "Compliance.png",
       description: "Protect your business with HR documents aligned with federal labor standards. Includes at-will acknowledgments, confidentiality agreements, code of conduct templates, and basic policy.",
-      url: "#"
+      url: "https://www.etsy.com/listing/4296003599/hrsmall-buisness-compliance-policy?ref=shop_home_active_5&logging_key=190fa202f3299eadce221908cdc0028c7416dafe%3A4296003599"
     },
     {
       title: "Onboarding & Offboarding Kit",

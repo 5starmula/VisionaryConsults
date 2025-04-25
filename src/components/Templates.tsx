@@ -27,7 +27,7 @@ export default function Templates() {
       title: "Onboarding & Offboarding Kit",
       image: "Onboarding.png",
       description: "Make a lasting first and final impression. Includes checklists, welcome letters, orientation forms, exit interviews, and termination templates for smooth transitions.",
-      url: "#"
+      url: "https://www.etsy.com/listing/4296024273/hr-onboarding-offboarding-kit?ref=shop_home_active_4&logging_key=29b52a94fd702c3ccaea8c8ea4bb613906bd2fd9%3A4296024273"
     }
   ];
 

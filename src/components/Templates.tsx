@@ -73,7 +73,7 @@ export default function Templates() {
         {/* View All Templates button */}
         <div className="mt-12 text-center">
           <a 
-            href="https://etsy.com/shop/visionaryconsults" 
+            href="https://www.etsy.com/shop/VisionaryConsultsLLC?ref=shop-header-name&listing_id=4296049993&from_page=listing" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-block bg-[#708238] hover:bg-[#5F6E30] text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-300"

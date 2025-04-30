@@ -38,9 +38,9 @@ export default function Candles() {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           {/* Animated Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-6">
             <motion.h2 
-              className="text-3xl md:text-4xl font-bold text-[#2E2E2E] mb-4"
+              className="text-3xl md:text-4xl font-bold text-[#2E2E2E] mb-2"
               initial={{ opacity: 0, y: -20 }}
               animate={{ 
                 opacity: 1, 
@@ -66,7 +66,7 @@ export default function Candles() {
               Char's Candle Bar
             </motion.h2>
             <motion.div 
-              className="w-24 h-1 bg-[#A1887F] mx-auto mb-6"
+              className="w-24 h-1 bg-[#A1887F] mx-auto mb-4"
               initial={{ width: 0 }}
               animate={{ width: "6rem" }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -74,7 +74,7 @@ export default function Candles() {
           </div>
 
           {/* Logo - removed from circle and animations */}
-          <div className="flex justify-center mb-10 relative h-[400px] w-[400px] mx-auto">
+          <div className="flex justify-center mb-6 relative h-[400px] w-[400px] mx-auto">
             <Image 
               src="/newcandles.png"
               alt="Char's Candle Bar Logo" 
@@ -91,7 +91,7 @@ export default function Candles() {
           </div>
           
           {/* Content */}
-          <div className="mb-14">
+          <div className="mb-10">
             {/* Text */}
             <ScrollReveal variants={fadeInUp} delay={0.2}>
               <div className="mb-10 px-4 md:px-8 bg-white/50 backdrop-blur-sm rounded-2xl p-6 shadow-sm">

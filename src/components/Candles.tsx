@@ -113,16 +113,16 @@ const Candles = () => {
             >
               <div className="relative h-[300px] rounded-lg overflow-hidden">
                 <Image
-                  src="/Candle1.jpeg"
-                  alt="Hand-poured candle making process"
+                  src="/Candle.png"
+                  alt="Elegant handcrafted candle with warm glow"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="relative h-[300px] rounded-lg overflow-hidden">
                 <Image
-                  src="/Candle2.jpeg"
-                  alt="Finished candle products"
+                  src="/charscandle.jpg"
+                  alt="Premium scented candle collection"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
                 />

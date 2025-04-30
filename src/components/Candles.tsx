@@ -108,29 +108,33 @@ const Candles = () => {
 
             {/* Image Grid */}
             <motion.div 
-              className="grid grid-cols-1 md:grid-cols-2 gap-6"
+              className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto px-4"
               variants={itemVariants}
             >
-              <div className="relative aspect-square rounded-lg overflow-hidden">
+              <div className="w-full h-[400px] rounded-lg overflow-hidden bg-white shadow-md">
                 <Image
-                  src="/newcandle1.jpeg"
+                  src="/images/newcandle1.jpeg"
                   alt="Hand-poured candle making process"
-                  width={600}
-                  height={600}
-                  quality={100}
-                  priority
-                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                  width={400}
+                  height={400}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                  }}
                 />
               </div>
-              <div className="relative aspect-square rounded-lg overflow-hidden">
+              <div className="w-full h-[400px] rounded-lg overflow-hidden bg-white shadow-md">
                 <Image
-                  src="/newcandle2.jpeg"
+                  src="/images/newcandle2.jpeg"
                   alt="Finished candle products"
-                  width={600}
-                  height={600}
-                  quality={100}
-                  priority
-                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                  width={400}
+                  height={400}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                  }}
                 />
               </div>
             </motion.div>

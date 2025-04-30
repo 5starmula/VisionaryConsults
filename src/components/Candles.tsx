@@ -111,28 +111,26 @@ const Candles = () => {
               className="grid grid-cols-1 md:grid-cols-2 gap-6"
               variants={itemVariants}
             >
-              <div className="relative h-[500px] w-full rounded-lg overflow-hidden">
+              <div className="relative aspect-square rounded-lg overflow-hidden">
                 <Image
                   src="/newcandle1.jpeg"
                   alt="Hand-poured candle making process"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: 'cover' }}
+                  width={600}
+                  height={600}
                   quality={100}
                   priority
-                  className="hover:scale-105 transition-transform duration-300"
+                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="relative h-[500px] w-full rounded-lg overflow-hidden">
+              <div className="relative aspect-square rounded-lg overflow-hidden">
                 <Image
                   src="/newcandle2.jpeg"
                   alt="Finished candle products"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: 'cover' }}
+                  width={600}
+                  height={600}
                   quality={100}
                   priority
-                  className="hover:scale-105 transition-transform duration-300"
+                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </motion.div>

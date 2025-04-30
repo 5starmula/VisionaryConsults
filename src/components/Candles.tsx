@@ -113,7 +113,7 @@ const Candles = () => {
             >
               <div className="relative h-[300px] rounded-lg overflow-hidden">
                 <Image
-                  src="/Candle1.jpeg"
+                  src="/newcandle1.jpeg"
                   alt="Hand-poured candle making process"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
@@ -121,7 +121,7 @@ const Candles = () => {
               </div>
               <div className="relative h-[300px] rounded-lg overflow-hidden">
                 <Image
-                  src="/Candle2.jpeg"
+                  src="/newcandle2.jpeg"
                   alt="Finished candle products"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"

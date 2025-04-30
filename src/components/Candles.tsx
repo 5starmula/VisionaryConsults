@@ -113,7 +113,7 @@ const Candles = () => {
             >
               <div className="w-full h-[400px] rounded-lg overflow-hidden bg-white shadow-md">
                 <Image
-                  src="/images/Candle1.jpeg"
+                  src="/images/newcandle1.jpeg"
                   alt="Hand-poured candle making process"
                   width={400}
                   height={400}
@@ -126,7 +126,7 @@ const Candles = () => {
               </div>
               <div className="w-full h-[400px] rounded-lg overflow-hidden bg-white shadow-md">
                 <Image
-                  src="/images/Candle2.jpeg"
+                  src="/images/newcandle2.jpeg"
                   alt="Finished candle products"
                   width={400}
                   height={400}

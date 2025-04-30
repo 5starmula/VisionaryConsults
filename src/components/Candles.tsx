@@ -76,7 +76,7 @@ export default function Candles() {
           {/* Logo - removed from circle and animations */}
           <div className="flex justify-center mb-10">
             <Image 
-              src="/charscandle.jpg" 
+              src="/Candle.png" 
               alt="Char's Candle Bar Logo" 
               width={280} 
               height={280}

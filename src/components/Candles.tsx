@@ -158,7 +158,7 @@ export default function Candles() {
           <ScrollReveal variants={fadeInUp} delay={0.8}>
             <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl py-8 px-4 shadow-md">
               <motion.a 
-                href="https://buy.stripe.com/test_14k5nk8Ot3Nl7PG4gg" 
+                href="https://www.etsy.com/shop/VisionaryConsultsLLC?ref=shop-header-name&listing_id=4296049993&from_page=listing" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-[#A1887F] hover:bg-[#8D776F] text-white font-medium py-3 px-10 rounded-full shadow-lg transition-all duration-300"

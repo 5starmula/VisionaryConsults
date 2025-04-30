@@ -113,27 +113,27 @@ const Candles = () => {
             >
               <div className="w-full h-[400px] rounded-lg overflow-hidden bg-white shadow-md">
                 <Image
-                  src="/images/newcandle1.jpeg"
+                  src="/images/Candle1.jpeg"
                   alt="Hand-poured candle making process"
                   width={400}
                   height={400}
                   style={{
                     width: '100%',
                     height: '100%',
-                    objectFit: 'contain',
+                    objectFit: 'cover',
                   }}
                 />
               </div>
               <div className="w-full h-[400px] rounded-lg overflow-hidden bg-white shadow-md">
                 <Image
-                  src="/images/newcandle2.jpeg"
+                  src="/images/Candle2.jpeg"
                   alt="Finished candle products"
                   width={400}
                   height={400}
                   style={{
                     width: '100%',
                     height: '100%',
-                    objectFit: 'contain',
+                    objectFit: 'cover',
                   }}
                 />
               </div>

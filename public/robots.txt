@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
  
 # Sitemap location
-Sitemap: https://visionaryconsults.org/sitemap.xml 
+Sitemap: https://visionaryconsults.com/sitemap.xml 

@@ -74,13 +74,15 @@ export default function Candles() {
           </div>
 
           {/* Logo - removed from circle and animations */}
-          <div className="flex justify-center mb-10">
+          <div className="flex justify-center mb-10 relative w-[280px] h-[280px] mx-auto">
             <Image 
               src="/charscandle.jpg" 
               alt="Char's Candle Bar Logo" 
-              width={280} 
-              height={280}
-              className="max-w-full h-auto"
+              fill
+              priority
+              sizes="(max-width: 280px) 100vw, 280px"
+              style={{ objectFit: 'contain' }}
+              className="rounded-lg"
             />
           </div>
           

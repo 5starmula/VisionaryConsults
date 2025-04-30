@@ -1,12 +1,37 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ScrollReveal from './utils/ScrollReveal';
 import { fadeInUp, fadeIn, scaleUp } from './utils/animations';
 import Image from 'next/image';
 
-export default function Candles() {
+const Candles = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <section id="candles" className="py-20 bg-gradient-to-b from-[#F8E1DA] to-[#FAF9F6] relative overflow-hidden">
       {/* Decorative elements */}
@@ -41,39 +66,17 @@ export default function Candles() {
           <div className="text-center mb-6">
             <motion.h2 
               className="text-3xl md:text-4xl font-bold text-[#2E2E2E] mb-2"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ 
-                opacity: 1, 
-                y: 0,
-                transition: { 
-                  duration: 0.8,
-                  ease: "easeOut",
-                }
-              }}
-              whileInView={{
-                textShadow: [
-                  "0 0 0px rgba(161, 136, 127, 0)",
-                  "0 0 5px rgba(161, 136, 127, 0.5)",
-                  "0 0 0px rgba(161, 136, 127, 0)"
-                ],
-                transition: {
-                  duration: 2.5,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }
-              }}
+              variants={itemVariants}
             >
               Char's Candle Bar
             </motion.h2>
             <motion.div 
               className="w-24 h-1 bg-[#A1887F] mx-auto mb-4"
-              initial={{ width: 0 }}
-              animate={{ width: "6rem" }}
-              transition={{ duration: 1, delay: 0.5 }}
+              variants={itemVariants}
             />
           </div>
 
-          {/* Logo - removed from circle and animations */}
+          {/* Logo */}
           <div className="flex justify-center mb-6 relative h-[400px] w-[400px] mx-auto">
             <Image 
               src="/newcandles.png"
@@ -93,71 +96,38 @@ export default function Candles() {
           {/* Content */}
           <div className="mb-10">
             {/* Text */}
-            <ScrollReveal variants={fadeInUp} delay={0.2}>
-              <div className="mb-10 px-4 md:px-8 bg-white/50 backdrop-blur-sm rounded-2xl p-6 shadow-sm">
-                <p className="text-[#2E2E2E] text-base leading-relaxed mb-6">
-                  At Char's Candle Bar, every candle is a handcrafted experience—infused with love, intention, and a touch of luxury. We pour each candle using premium wax blends and thoughtfully curated fragrances designed to calm, uplift, and inspire. Whether you're setting the mood, creating sacred space, or simply indulging in self-care, our candles offer a soft glow and rich aroma that transforms any room into a sanctuary.
-                </p>
-                <motion.p 
-                  className="text-[#708238] text-lg md:text-xl font-medium text-center italic"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                >
-                  Blush pink dreams. Champagne vibes. Golden energy—this is the Char way.
-                </motion.p>
+            <motion.div 
+              className="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg mb-8"
+              variants={itemVariants}
+            >
+              <p className="text-[#2E2E2E] text-lg leading-relaxed">
+                Welcome to Char's Candle Bar, where we craft unique, hand-poured candles that bring warmth and ambiance to your space. 
+                Each candle is carefully made with premium soy wax and essential oils, ensuring a clean, long-lasting burn and delightful fragrance.
+              </p>
+            </motion.div>
+
+            {/* Image Grid */}
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-2 gap-6"
+              variants={itemVariants}
+            >
+              <div className="relative h-[300px] rounded-lg overflow-hidden">
+                <Image
+                  src="/Candle1.jpeg"
+                  alt="Hand-poured candle making process"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
-            </ScrollReveal>
-            
-            {/* Images */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              <ScrollReveal variants={fadeIn} delay={0.4}>
-                <motion.div 
-                  className="bg-white rounded-2xl shadow-lg p-3 overflow-hidden border border-[#F8E1DA]"
-                  style={{ height: "350px" }}
-                  whileHover={{ 
-                    y: -8, 
-                    boxShadow: "0 15px 30px rgba(0, 0, 0, 0.1)",
-                    borderColor: "#A1887F"
-                  }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="w-full h-full flex items-center justify-center relative rounded-xl overflow-hidden">
-                    <Image
-                      src="/Candle1.jpeg"
-                      alt="Luxury handcrafted candle"
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="transition-transform duration-500 hover:scale-110"
-                    />
-                  </div>
-                </motion.div>
-              </ScrollReveal>
-              
-              <ScrollReveal variants={fadeIn} delay={0.6}>
-                <motion.div 
-                  className="bg-white rounded-2xl shadow-lg p-3 overflow-hidden border border-[#F8E1DA]"
-                  style={{ height: "350px" }}
-                  whileHover={{ 
-                    y: -8, 
-                    boxShadow: "0 15px 30px rgba(0, 0, 0, 0.1)",
-                    borderColor: "#A1887F"
-                  }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="w-full h-full flex items-center justify-center relative rounded-xl overflow-hidden">
-                    <Image
-                      src="/Candle2.jpeg" 
-                      alt="Premium scented candle"
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="transition-transform duration-500 hover:scale-110"
-                    />
-                  </div>
-                </motion.div>
-              </ScrollReveal>
-            </div>
+              <div className="relative h-[300px] rounded-lg overflow-hidden">
+                <Image
+                  src="/Candle2.jpeg"
+                  alt="Finished candle products"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </motion.div>
           </div>
 
           {/* CTA */}
@@ -185,4 +155,6 @@ export default function Candles() {
       </div>
     </section>
   );
-} 
+};
+
+export default Candles; 

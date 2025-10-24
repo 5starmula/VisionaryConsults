@@ -7,7 +7,7 @@ export default function Books() {
   const books = [
     {
       title: "Navigating the Workforce While Black in America",
-      image: "Workforce.jpg",
+      image: "Workforce.png",
       blurb: "Are you a Black professional navigating workplace challenges, discrimination, or career setbacks? The corporate world can be a difficult space for Black professionals, filled with unspoken rules, systemic biases, and career roadblocks. This book provides strategies, legal insights, and workplace survival tactics to help you protect your career, advocate for yourself, and achieve success in corporate America and beyond.",
       buyLink: "https://www.amazon.com/Navigating-Workforce-While-Black-America/dp/B0DX7DPV1J?ref_=ast_author_dp_rw&dib=eyJ2IjoiMSJ9.AS-hc7y_jdrQpeAxX1NHO_TTDrQz9HPNRwkVFgUugdSaX7uisVVqxu8xF7gs4gjq0EGp9v_4rd6r9luqxPo9G6US8wrDwOyBskmXaEKOKw8.RQeUoz6d3DRafYOXc1jPKKPP8oW05nI"
     },

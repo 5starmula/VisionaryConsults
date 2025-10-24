@@ -117,7 +117,7 @@ const Candles = () => {
                 transition={{ duration: 0.2 }}
               >
                 <img
-                  src="/newcandle1.jpeg"
+                  src="/images/newcandle1.jpeg"
                   alt="Hand-poured candle making process"
                   className="w-full h-[400px] object-cover rounded-lg"
                 />
@@ -128,7 +128,7 @@ const Candles = () => {
                 transition={{ duration: 0.2 }}
               >
                 <img
-                  src="/newcandle2.jpeg"
+                  src="/images/newcandle2.jpeg"
                   alt="Finished candle products"
                   className="w-full h-[400px] object-cover rounded-lg"
                 />

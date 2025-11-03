@@ -75,7 +75,7 @@ export default function Header() {
             </motion.div>
           ))}
           <motion.a 
-            href="https://buy.stripe.com/test_14k5nk8Ot3Nl7PG4gg" 
+            href="https://pci.jotform.com/form/253065665915161" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="bg-[#A1887F] hover:bg-[#8D776F] text-white text-sm font-medium py-1.5 px-3 rounded-lg shadow-sm transition duration-300"
@@ -85,7 +85,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: navItems.length * 0.1 }}
           >
-            Make a Payment
+            Book A Consultation
           </motion.a>
         </nav>
       </div>
@@ -123,7 +123,7 @@ export default function Header() {
                 </motion.div>
               ))}
               <motion.a 
-                href="https://buy.stripe.com/test_14k5nk8Ot3Nl7PG4gg" 
+                href="https://pci.jotform.com/form/253065665915161" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="bg-[#A1887F] hover:bg-[#8D776F] text-white text-sm font-medium py-1.5 px-3 rounded-lg shadow-sm transition duration-300 flex justify-center"
@@ -132,7 +132,7 @@ export default function Header() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Make a Payment
+                Book A Consultation
               </motion.a>
             </motion.div>
           </motion.nav>

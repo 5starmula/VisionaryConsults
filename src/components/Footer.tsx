@@ -56,12 +56,12 @@ export default function Footer() {
               </a>
             </div>
             <a 
-              href="https://buy.stripe.com/test_14k5nk8Ot3Nl7PG4gg" 
+              href="https://pci.jotform.com/form/253065665915161" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="inline-block bg-[#A1887F] hover:bg-[#8D776F] text-white text-sm font-medium py-1.5 px-3 rounded-lg shadow-sm transition duration-300"
             >
-              Make a Payment
+              Book A Consultation
             </a>
           </div>
           

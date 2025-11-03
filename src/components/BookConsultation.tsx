@@ -16,7 +16,7 @@ export default function BookConsultation() {
             Complete the form and we will get back to you within 24-hours to book a consultation.
           </p>
           
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
             {/* Left side - Phone Image */}
             <div className="flex justify-center md:justify-start">
               <div className="relative w-full max-w-md">
@@ -31,7 +31,7 @@ export default function BookConsultation() {
               </div>
             </div>
             
-            {/* Right side - Content and Button */}
+            {/* Right side - Content */}
             <div className="flex flex-col justify-center space-y-8">
               <div>
                 <p className="text-white mb-6 text-lg">
@@ -66,18 +66,19 @@ export default function BookConsultation() {
                   </li>
                 </ul>
               </div>
-              
-              <div className="text-center md:text-left">
-                <a 
-                  href="https://pci.jotform.com/form/253065665915161" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="inline-block bg-[#A1887F] hover:bg-[#8D776F] text-white text-lg font-semibold py-4 px-8 rounded-lg shadow-lg transition duration-300 transform hover:scale-105"
-                >
-                  Book Consultation
-                </a>
-              </div>
             </div>
+          </div>
+          
+          {/* Book Consultation Button - Centered at Bottom */}
+          <div className="text-center">
+            <a 
+              href="https://pci.jotform.com/form/253065665915161" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-block bg-[#A1887F] hover:bg-[#8D776F] text-white text-lg font-semibold py-4 px-8 rounded-lg shadow-lg transition duration-300 transform hover:scale-105"
+            >
+              Book Consultation
+            </a>
           </div>
         </div>
       </div>

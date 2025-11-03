@@ -85,7 +85,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: navItems.length * 0.1 }}
           >
-            Book A Consultation
+Book Consultation
           </motion.a>
         </nav>
       </div>
@@ -132,7 +132,7 @@ export default function Header() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Book A Consultation
+    Book Consultation
               </motion.a>
             </motion.div>
           </motion.nav>

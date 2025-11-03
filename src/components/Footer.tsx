@@ -61,7 +61,7 @@ export default function Footer() {
               rel="noopener noreferrer" 
               className="inline-block bg-[#A1887F] hover:bg-[#8D776F] text-white text-sm font-medium py-1.5 px-3 rounded-lg shadow-sm transition duration-300"
             >
-              Book A Consultation
+              Book Consultation
             </a>
           </div>
           

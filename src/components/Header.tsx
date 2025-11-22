@@ -34,7 +34,7 @@ export default function Header() {
         >
           <Link href="/" className="flex items-center">
             <Image 
-              src="/images/logo.png" 
+              src="/images/Visionary_Consults_Enhanced.png" 
               alt="Visionary Consults Logo" 
               width={100} 
               height={100} 

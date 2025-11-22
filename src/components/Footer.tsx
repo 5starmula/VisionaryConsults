@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <Image 
-                src="/images/logo.png" 
+                src="/images/Visionary_Consults_Enhanced.png" 
                 alt="Visionary Consults Logo" 
                 width={60} 
                 height={60} 

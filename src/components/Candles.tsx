@@ -79,7 +79,7 @@ const Candles = () => {
           {/* Logo */}
           <div className="flex justify-center mb-6 relative h-[400px] w-[400px] mx-auto">
             <Image 
-              src="/newcandles.png"
+              src="/images/candlebarnewlogo.png"
               alt="Char's Candle Bar Logo" 
               fill
               priority

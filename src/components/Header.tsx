@@ -36,9 +36,9 @@ export default function Header() {
             <Image 
               src="/images/Visionary_Consults_Enhanced.png" 
               alt="Visionary Consults Logo" 
-              width={150} 
-              height={150} 
-              className="w-20 h-20 md:w-36 md:h-36"
+              width={200} 
+              height={200} 
+              className="w-28 h-28 md:w-48 md:h-48"
               priority
             />
           </Link>

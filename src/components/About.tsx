@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 
 export default function About() {
   const coreStrengths = [
@@ -60,14 +59,15 @@ export default function About() {
           </div>
           
           <div className="order-1 md:order-2 flex justify-center">
-            <div className="relative bg-white rounded-lg shadow-lg h-80 w-80 md:h-96 md:w-96 overflow-hidden">
-              <Image 
+            <div className="relative bg-white rounded-lg shadow-lg w-80 h-96 md:w-96 md:h-[28rem] flex items-center justify-center p-1">
+              <img 
                 src="/images/CharVernon2.png" 
                 alt="Char Vernon - Founder of Visionary Consults" 
-                fill
-                style={{ objectFit: 'cover' }}
-                className="rounded-lg"
-                priority
+                className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg"
+                style={{ objectPosition: 'center top' }}
+                onError={(e) => {
+                  e.currentTarget.src = '/images/CharVernon.jpeg';
+                }}
               />
             </div>
           </div>

@@ -62,7 +62,7 @@ export default function About() {
           <div className="order-1 md:order-2 flex justify-center">
             <div className="relative bg-white rounded-lg shadow-lg h-80 w-80 md:h-96 md:w-96 overflow-hidden">
               <Image 
-                src="/images/CharVernon.jpeg" 
+                src="/images/CharVernon2.png" 
                 alt="Char Vernon - Founder of Visionary Consults" 
                 fill
                 style={{ objectFit: 'cover' }}

@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const reviews = [
   {
@@ -48,6 +48,33 @@ const reviews = [
 ];
 
 export default function Reviews() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollStepRef = useRef(0);
+  const pausedRef = useRef(false);
+  const loopedReviews = [...reviews, ...reviews];
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const interval = setInterval(() => {
+      if (pausedRef.current) return;
+
+      const maxLoopWidth = container.scrollWidth / 2;
+      const nextPosition = container.scrollLeft + 1;
+
+      if (nextPosition >= maxLoopWidth) {
+        container.scrollLeft = 0;
+        scrollStepRef.current = 0;
+      } else {
+        container.scrollLeft = nextPosition;
+        scrollStepRef.current = nextPosition;
+      }
+    }, 20);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="reviews" className="py-20 bg-[#FAF9F6]">
       <div className="container mx-auto px-4">
@@ -57,10 +84,19 @@ export default function Reviews() {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scroll-smooth">
-          {reviews.map((review) => (
+          <div
+            ref={scrollRef}
+            className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            onMouseEnter={() => {
+              pausedRef.current = true;
+            }}
+            onMouseLeave={() => {
+              pausedRef.current = false;
+            }}
+          >
+          {loopedReviews.map((review, index) => (
             <article
-              key={review.name}
+              key={`${review.name}-${index}`}
               className="relative bg-white rounded-2xl border-2 border-[#E9D5CD] shadow-md p-6 min-h-[240px] flex-shrink-0 snap-start w-[85%] sm:w-[70%] md:w-[48%] lg:w-[32%]"
             >
               <div className={`inline-flex items-center justify-center w-10 h-10 rounded-full mb-4 ${review.accent}`}>

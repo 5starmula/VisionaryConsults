@@ -4,24 +4,45 @@ import React from 'react';
 
 const reviews = [
   {
-    name: 'Danielle M.',
-    role: 'Career Coaching Client',
+    name: 'Umoki',
+    role: 'Books Client - Baltimore',
     quote:
-      'Working with Char helped me reposition my resume and interview strategy. I landed a role that aligned with both my goals and values.',
+      'I was looking for ideas on how to strategically position myself for my next career move.',
     accent: 'border-[#A1887F] text-[#A1887F] bg-[#F8E1DA]',
   },
   {
-    name: 'Marcus T.',
-    role: 'HR Consulting Client',
+    name: 'Latisha',
+    role: 'Books and Candles Client - Fort Washington, MD',
     quote:
-      'Visionary Consults brought structure and clarity to our HR processes. The support was practical, thoughtful, and results-driven.',
+      'How to write my first book and what it takes.',
     accent: 'border-[#708238] text-[#708238] bg-[#E8F0D8]',
   },
   {
-    name: 'Alyssa R.',
-    role: 'Author Services Client',
+    name: 'Lisa',
+    role: 'Books Client - Oakton, VA',
     quote:
-      'Char made the publishing process feel manageable and empowering. Her creative direction gave my project confidence and polish.',
+      'I was struggling with understanding the job market and how to position myself in this climate.',
+    accent: 'border-[#D97B6C] text-[#D97B6C] bg-[#F8E1DA]',
+  },
+  {
+    name: 'Lisa',
+    role: 'Business Consulting Client',
+    quote:
+      'I needed information on marketing my business and how to structure my next steps.',
+    accent: 'border-[#A1887F] text-[#A1887F] bg-[#F8E1DA]',
+  },
+  {
+    name: 'AST',
+    role: 'Books and Candles Client - Clinton',
+    quote:
+      'Good business. Professional guidance and clear direction.',
+    accent: 'border-[#708238] text-[#708238] bg-[#E8F0D8]',
+  },
+  {
+    name: 'Ron',
+    role: 'HR Consultation Client - Washington, DC',
+    quote:
+      'Leaving federal service unexpectedly after 25 years was difficult. This support helped me plan my transition with confidence.',
     accent: 'border-[#D97B6C] text-[#D97B6C] bg-[#F8E1DA]',
   },
 ];
@@ -35,11 +56,12 @@ export default function Reviews() {
           <div className="w-24 h-1 bg-[#A1887F] mx-auto" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scroll-smooth">
           {reviews.map((review) => (
             <article
               key={review.name}
-              className="relative bg-white rounded-2xl border-2 border-[#E9D5CD] shadow-md p-6 min-h-[240px]"
+              className="relative bg-white rounded-2xl border-2 border-[#E9D5CD] shadow-md p-6 min-h-[240px] flex-shrink-0 snap-start w-[85%] sm:w-[70%] md:w-[48%] lg:w-[32%]"
             >
               <div className={`inline-flex items-center justify-center w-10 h-10 rounded-full mb-4 ${review.accent}`}>
                 <span className="text-2xl leading-none">"</span>
@@ -66,6 +88,8 @@ export default function Reviews() {
               </div>
             </article>
           ))}
+          </div>
+          <p className="text-center text-sm text-[#6B7280]">Swipe or scroll to see more reviews.</p>
         </div>
       </div>
     </section>

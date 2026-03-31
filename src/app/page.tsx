@@ -8,6 +8,7 @@ import BookConsultation from '../components/BookConsultation';
 import Books from '../components/Books';
 import Templates from '../components/Templates';
 import Candles from '../components/Candles';
+import Reviews from '../components/Reviews';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <Books />
       <Templates />
       <Candles />
+      <Reviews />
       <Footer />
     </main>
   );

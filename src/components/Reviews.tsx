@@ -49,7 +49,6 @@ const reviews = [
 
 export default function Reviews() {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const scrollStepRef = useRef(0);
   const pausedRef = useRef(false);
   const loopedReviews = [...reviews, ...reviews];
 
@@ -57,20 +56,26 @@ export default function Reviews() {
     const container = scrollRef.current;
     if (!container) return;
 
+    const getScrollStep = () => {
+      const firstCard = container.querySelector('article');
+      if (!firstCard) return 320;
+      const cardWidth = firstCard.getBoundingClientRect().width;
+      const gap = 24; // matches Tailwind gap-6
+      return cardWidth + gap;
+    };
+
     const interval = setInterval(() => {
       if (pausedRef.current) return;
 
       const maxLoopWidth = container.scrollWidth / 2;
-      const nextPosition = container.scrollLeft + 1;
+      const nextPosition = container.scrollLeft + getScrollStep();
 
       if (nextPosition >= maxLoopWidth) {
-        container.scrollLeft = 0;
-        scrollStepRef.current = 0;
+        container.scrollTo({ left: 0, behavior: 'smooth' });
       } else {
-        container.scrollLeft = nextPosition;
-        scrollStepRef.current = nextPosition;
+        container.scrollTo({ left: nextPosition, behavior: 'smooth' });
       }
-    }, 20);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);

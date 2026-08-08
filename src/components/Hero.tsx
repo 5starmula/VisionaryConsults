@@ -27,11 +27,18 @@ export default function Hero() {
                 Welcome to Visionary Consults
               </motion.h1>
               <motion.p 
-                className="text-[#2E2E2E] mb-8 text-lg"
+                className="text-[#2E2E2E] mb-4 text-lg font-medium"
                 variants={fadeInUp}
                 transition={{ delay: 0.4 }}
               >
-                Your trusted partner in professional growth, creative development, and purposeful living. Whether you are navigating a career crossroads, building a business, or seeking tools to empower young minds, you're in the right place
+                Your trusted partner for professional consulting, business solutions, organizational support, and personal growth.
+              </motion.p>
+              <motion.p 
+                className="text-[#2E2E2E] mb-8 text-lg"
+                variants={fadeInUp}
+                transition={{ delay: 0.5 }}
+              >
+                Visionary Consults helps government agencies, businesses, nonprofit organizations, and professionals strengthen operations, develop their workforce, improve organizational performance, and achieve meaningful results. Our expertise combines administrative operations, executive support, human resources, communications, quality improvement, workforce development, technical writing, training, and strategic consulting to deliver practical solutions with lasting impact.
               </motion.p>
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4"

@@ -5,19 +5,24 @@ import React from 'react';
 export default function WhatWeDo() {
   const services = [
     {
-      title: "Career & HR Consulting",
-      description: "Resume development, workplace strategies, and hiring guidance.",
-      icon: "📊"
+      title: "Professional Consulting & Business Solutions",
+      description: "Strategic consulting and business support designed to strengthen organizations through administrative operations, executive support, human resources, communications, organizational development, quality improvement, and business strategy.",
+      icon: "💼"
     },
     {
-      title: "Children's Books",
-      description: "Explore our inspiring collection of books and printable activities that nurture resilience and creativity.",
-      icon: "📚"
+      title: "Administrative & Organizational Support",
+      description: "Professional administrative support, executive assistance, project coordination, records management, meeting support, workflow improvement, and operational efficiency.",
+      icon: "🗂️"
     },
     {
-      title: "Business & Admin Support",
-      description: "Back-end operations, nonprofit support, templates, and forms for solopreneurs and small teams.",
-      icon: "💡"
+      title: "Training & Educational Resources",
+      description: "Curriculum development, workforce development, children's educational resources, professional development materials, and customized learning solutions.",
+      icon: "🎓"
+    },
+    {
+      title: "Business Resources & Templates",
+      description: "Professionally developed templates, guides, tools, and digital resources created from real-world experience to help professionals and organizations work smarter.",
+      icon: "📄"
     }
   ];
 
@@ -32,7 +37,7 @@ export default function WhatWeDo() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300 border border-[#F8E1DA] group hover:border-[#A1887F]">
               <div className="text-4xl mb-4">{service.icon}</div>

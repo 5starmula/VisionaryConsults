@@ -8,21 +8,15 @@ export default function About() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2E2E2E] mb-4">About Char Vernon</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#2E2E2E] mb-4">Meet Char Vernon</h2>
             <h3 className="text-xl text-[#708238] mb-6">
               Founder | HR Strategist | Author | Creative Director
             </h3>
             <p className="text-[#2E2E2E] mb-6">
-              Char Vernon is an author, HR professional, and creative entrepreneur with over 15 years of experience in human resources, executive support, and workforce strategy. She holds a Master&apos;s degree in Human Resource Management and is currently pursuing her Doctorate in Communications, combining real-world expertise with advanced academic insight.
-            </p>
-            <p className="text-[#2E2E2E] mb-6">
-              As the founder of Visionary Consults, LLC, Char creates practical tools, career resources, and engaging content designed to empower individuals to navigate both professional and personal challenges with confidence.
-            </p>
-            <p className="text-[#2E2E2E] mb-6">
-              Her body of work spans multiple genres, from workforce development guides like <em>2025 is a Shhh Show: The Struggles in Today&apos;s Job Market</em> to imaginative children&apos;s books such as <em>Brandon&apos;s Brave Biking Bonanza</em>. Her children&apos;s stories blend rhythm, creativity, and life lessons, encouraging resilience, critical thinking, and confidence in young readers.
+              Char Vernon is the Founder and Principal Consultant of Visionary Consults. With extensive experience supporting federal government, healthcare, nonprofit organizations, and private industry, she has built a career helping organizations improve operations, strengthen workforce initiatives, develop effective processes, and deliver high-quality administrative and organizational support.
             </p>
             <p className="text-[#2E2E2E] mb-8">
-              From her first publication to a growing catalog of books and resources, Char&apos;s work reflects continuous growth, authenticity, and a commitment to creating meaningful, impactful content.
+              Her expertise includes executive administration, human resources, quality improvement, communications, technical writing, project coordination, training, curriculum development, and organizational strategy. Char holds a Master of Science in Human Resources Management and a Bachelor of Science in Criminology. She is also an author and curriculum developer who creates practical resources that help individuals and organizations grow with confidence.
             </p>
           </div>
           

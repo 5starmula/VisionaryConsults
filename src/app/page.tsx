@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import WhatWeDo from '../components/WhatWeDo';
 import Mission from '../components/Mission';
 import WhyWorkWithUs from '../components/WhyWorkWithUs';
+import Capabilities from '../components/Capabilities';
 import About from '../components/About';
 import BookConsultation from '../components/BookConsultation';
 import Books from '../components/Books';
@@ -18,6 +19,7 @@ export default function Home() {
       <WhatWeDo />
       <Mission />
       <WhyWorkWithUs />
+      <Capabilities />
       <About />
       <BookConsultation />
       <Books />
